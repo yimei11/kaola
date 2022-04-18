@@ -32,10 +32,10 @@
         "packNpmManually": true,
         "packNpmRelationList": [
             {
-              "packageJsonPath": "./package.json",
-              "miniprogramNpmDistDir": "./"
+                "packageJsonPath": "./package.json",
+                "miniprogramNpmDistDir": "./"
             }
-          ],
+        ],
         "minifyWXSS": true,
         "disableUseStrict": false,
         "ignoreUploadUnusedFiles": true,
@@ -44,7 +44,7 @@
     "compileType": "miniprogram",
     "libVersion": "2.19.4",
     "appid": "wx5052504ed5a2e5c3",
-    "projectname": "kaola",
+    "projectname": "kaolahaigou",
     "debugOptions": {
         "hidedInDevtools": []
     },
