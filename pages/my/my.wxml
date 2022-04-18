@@ -1,2 +1,37 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<!-- 未登录 -->
+<view class="nologin">
+  <view class="top">
+    <view class="login_register">登录/注册</view>
+    <view class="text">关注品牌第一时间发现更多新品、折扣</view>
+  </view>
+  <van-grid column-num="5" border="{{ false }}" custom-class="fk">
+    <van-grid-item use-slot wx:for="{{ 5 }}" wx:for-item="index">
+      <image
+        style="width: 100%; height: 90px;"
+        src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg"
+      />
+    </van-grid-item>
+  </van-grid>
+  <van-grid column-num="3" border="{{ false }}" custom-class="yh">
+    <van-grid-item use-slot wx:for="{{ 3 }}" wx:for-item="index">
+      <image
+        style="width: 100%; height: 90px;"
+        src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg"
+      />
+    </van-grid-item>
+  </van-grid>
+  <view class="help">
+  </view>
+  <van-grid column-num="2" border="{{ false }}" custom-class="products">
+    <van-grid-item use-slot wx:for="{{ 3 }}" wx:for-item="index">
+      <image
+        style="width: 100%; height: 90px;"
+        src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg"
+      />
+    </van-grid-item>
+  </van-grid>
+</view>
+<!-- 登录 -->
+<view class="login">
+</view>
