@@ -9,14 +9,12 @@
         ]
     },
     "setting": {
-        "bundle": false,
-        "userConfirmedBundleSwitch": false,
         "urlCheck": true,
         "scopeDataCheck": false,
         "coverView": true,
-        "es6": true,
+        "es6": false,
         "postcss": true,
-        "compileHotReLoad": true,
+        "compileHotReLoad": false,
         "lazyloadPlaceholderEnable": false,
         "preloadBackgroundData": false,
         "minified": true,
@@ -24,18 +22,23 @@
         "newFeature": false,
         "uglifyFileName": false,
         "uploadWithSourceMap": true,
-        "useIsolateContext": true,
+        "useIsolateContext": false,
         "nodeModules": false,
         "enhance": true,
         "useMultiFrameRuntime": true,
         "useApiHook": true,
         "useApiHostProcess": true,
         "showShadowRootInWxmlPanel": true,
-        "packNpmManually": false,
-        "enableEngineNative": false,
-        "packNpmRelationList": [],
+        "packNpmManually": true,
+        "packNpmRelationList": [
+            {
+              "packageJsonPath": "./package.json",
+              "miniprogramNpmDistDir": "./"
+            }
+          ],
         "minifyWXSS": true,
-        "showES6CompileOption": false,
+        "disableUseStrict": false,
+        "ignoreUploadUnusedFiles": true,
         "minifyWXML": true
     },
     "compileType": "miniprogram",
