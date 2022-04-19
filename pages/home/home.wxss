@@ -1,1 +1,130 @@
 /* pages/home/home.wxss */
+page{
+    background:#f2f2f2;
+}
+.search {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    box-sizing: border-box;
+    background:#fff;
+}
+
+.search .sear {
+    width: 80vw;
+}
+
+.classify {
+    display: flex;
+    margin-top: 110rpx;
+}
+
+.classify .item {
+    width: 20vw;
+    height: 20vw;
+}
+
+.classify .item .img {
+    width: 100%;
+    height: 100%;
+}
+
+.move {
+    height: 370rpx;
+    margin: 30rpx 30rpx 0;
+    padding: 30rpx 30rpx 0;
+    background:#fff;
+    border-radius: 20rpx;
+}
+
+.move .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.move .top .img {
+    width: 25vw;
+    height: 8vw;
+}
+
+.move .top .right {
+    color: #f7261d;
+}
+
+.move .commodity {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10rpx 0;
+}
+
+.move .commodity .item {
+    width: 23vw;
+    height: 23vw;
+}
+
+.move .commodity .item .img {
+    width: 100%;
+    height: 100%;
+}
+
+.move .commodity .item .movePrice {
+    font-size: 24rpx;
+    color: #f7261d;
+    margin: 10rpx 0;
+}
+
+.move .commodity .item .price {
+    font-size: 24rpx;
+    text-decoration: line-through;
+    color: #999;
+}
+
+
+.list{
+    margin:30rpx 30rpx;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.list .item {
+    background:#fff;
+    width: 45vw;
+    border-radius: 20rpx;
+    margin-top:20rpx;
+}
+.list .item .image{
+    width: 100%;
+    height: 45vw;
+    border-radius: 20rpx;
+}
+.list .item .name{
+    width: 50vw;
+    height: 10vw;
+    display: flex;
+    align-items: center;
+    margin:5rpx 25rpx;
+}
+.list .item .name .img{
+    width: 10%;
+    height: 50%;
+    margin-right:10rpx;
+}
+.list .item .title{
+    margin:5rpx 25rpx;
+    font-size: 28rpx;
+}
+.list .item .box{
+    display: inline-block;
+    font-size:26rpx;
+    margin:5rpx 25rpx;
+    border:1px solid red;
+}
+.list .item .price{
+    font-size:28rpx;
+    margin:5rpx 25rpx;
+    color:red;
+    font-weight: bold;
+}

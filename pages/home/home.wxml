@@ -1,2 +1,46 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class="search">
+    <van-search value="{{ value }}" shape="round" placeholder="在千万海外商品中搜索" bind:focus="foucusfn" field-class="sear" />
+    <van-icon name="scan" />
+</view>
+<view class="classify">
+    <block wx:for="{{classify}}" wx:key="*this">
+        <view class="item">
+            <image src="{{item.imgUrl}}" class="img"></image>
+        </view>
+    </block>
+</view>
+<view class="move">
+    <view class="top">
+        <image src="https://kaola-haitao.oss.kaolacdn.com/0476ba41-5468-429b-8f91-c778ab38bde3.png" class="img"></image>
+        <view class="right">大牌底价补贴
+            <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class="commodity">
+        <block wx:for="{{move}}" wx:key="*this">
+            <view class="item">
+                <image src="{{item.imgUrl}}" class="img"></image>
+                <view class="movePrice">硬核价￥{{item.movePrice}}</view>
+                <view class="price">￥{{item.price}}</view>
+            </view>
+        </block>
+    </view>
+</view>
+<view class="tabs">
+    
+</view>
+<view class="list">
+    <block wx:for="{{childrens}}" wx:key="*this">
+        <view class="item">
+            <image src="{{item.imgsrc}}" class="image"></image>
+            <view class="name">
+                <image src="{{item.country}}" class="img"></image>
+                {{item.brand}}
+            </view>
+            <view class="title">{{item.title}}</view>
+            <view class="box">{{item.box}}</view>
+            <view class="price">￥{{item.price}}</view>
+        </view>
+    </block>
+</view>

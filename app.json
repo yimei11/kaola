@@ -1,41 +1,47 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/home/home",
-    "pages/cart/cart",
-    "pages/my/my"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "backgroundColor": "#f5f5f5",
-    "color": "#666",
-    "selectedColor": "#f25",
-    "borderStyle": "white",
-    "list": [{
-        "pagePath": "pages/home/home",
-        "text": "首页",
-        "iconPath": "images/tab/home-off.png",
-        "selectedIconPath": "images/tab/home-on.png"
-      },
-      {
-        "pagePath": "pages/cart/cart",
-        "text": "购物车",
-        "iconPath": "images/tab/cart-off.png",
-        "selectedIconPath": "images/tab/cart-on.png"
-      },
-      {
-        "pagePath": "pages/my/my",
-        "text": "我的考拉",
-        "iconPath": "images/tab/my-off.png",
-        "selectedIconPath": "images/tab/my-on.png"
-      }
-    ]
-  },
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/home/home",
+        "pages/cart/cart",
+        "pages/my/my",
+        "pages/search/search"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "backgroundColor": "#f5f5f5",
+        "color": "#666",
+        "selectedColor": "#f25",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "images/tab/home-off.png",
+                "selectedIconPath": "images/tab/home-on.png"
+            },
+            {
+                "pagePath": "pages/cart/cart",
+                "text": "购物车",
+                "iconPath": "images/tab/cart-off.png",
+                "selectedIconPath": "images/tab/cart-on.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的考拉",
+                "iconPath": "images/tab/my-off.png",
+                "selectedIconPath": "images/tab/my-on.png"
+            }
+        ]
+    },
+    "usingComponents": {
+        "van-search": "@vant/weapp/search/index",
+        "van-icon": "@vant/weapp/icon/index"
+    },
+    "sitemapLocation": "sitemap.json"
 }
