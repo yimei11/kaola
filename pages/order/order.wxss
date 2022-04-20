@@ -1,0 +1,99 @@
+/* pages/order/order.wxss */
+.cell{
+    display: flex;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-bottom:1px solid #eeebee ;
+    padding-left: 30rpx;
+    font-size: 30rpx;
+}
+.add{
+    color:red;
+    font-size: 50rpx;
+    margin-right: 10rpx;
+}
+.logo{
+    color:rgb(4, 158, 4);
+    font-size: 50rpx ;
+    margin-right: 10rpx;
+}
+.card{
+    border-top:15rpx solid rgb(233, 230, 230) ;
+    border-bottom:15rpx solid rgb(233, 230, 230) ;
+    
+}
+.card .item{
+    height: 350rpx;
+
+}
+.card .item .top{
+    display: flex;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left:  20rpx;
+    border-bottom:1px solid #eeebee ;
+    font-size: 26rpx;
+}
+.card .item .top .lo{
+    font-size: 50rpx;
+    margin-right: 20rpx;
+}
+.card .item .main{
+    display: flex;
+    height: 270rpx;
+    box-sizing: border-box;
+    padding: 30rpx;
+
+}
+.card .item .main .imgbox{
+    flex-basis: 200rpx;
+    height: 100%;
+
+    margin-right: 20rpx;
+}
+.card .item .main .imgbox image{
+    width: 100%;
+    height: 100%;
+}
+.card .item .main .info{
+    flex:1;
+    display: flex;
+
+}
+.card .item .main .info .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+
+}
+.card .item .main .info .left .title{
+    font-size: 28rpx;
+    color:#000000;
+}
+.card .item .main .info .left view{
+    font-size: 25rpx;
+    color:#999;
+}
+.card .item .main .info .right{
+    text-align: right;
+    width: 20%;
+}
+.card .item .main .info .right .num{
+    font-size: 25rpx;
+    color:#999;
+    margin-top: 20rpx;
+}
+.user{
+    height: 100rpx;
+    padding: 30rpx;
+    font-weight: 200;
+    color:rgb(110, 108, 108);
+}
+
+.user .first{
+    font-size: 30rpx;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20rpx;
+}

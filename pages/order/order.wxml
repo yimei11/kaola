@@ -1,0 +1,64 @@
+<view class="head">
+    <van-nav-bar title="确认订单" left-arrow bind:click-left="left_fn" />
+</view>
+
+<view wx:if="{{!user}}">
+    <view class="cell" bindtap="handadd">
+        <view class="add">
+            <van-icon name="add-square" />
+        </view>
+        <view class="van-cell-text">手动添加收获地址</view>
+    </view>
+    <view class="cell" bindtap="chooseAddress">
+        <view class="logo">
+            <van-icon name="wechat" />
+        </view>
+        <view class="van-cell-text">一键获取微信地址</view>
+
+    </view>
+</view>
+<view wx:if="{{user}}" class="user">
+    <view class="first">
+        <van-icon name="location-o" /> {{user}} {{phone}}
+    </view>
+    <view>{{value}}{{detailadress}}</view>
+</view>
+
+
+<view class="card">
+    <view class="item">
+        <view class="top">
+            <view class="lo">
+                <van-icon name="shop-o" />
+            </view>
+            <view>
+                考拉美国直购自营店
+            </view>
+        </view>
+        <view class="main">
+            <view class="imgbox">
+                <image src=""></image>
+            </view>
+            <view class="info">
+                <view class="left">
+                    <view class="title">11111111111111111</view>
+                    <view>
+                        <van-icon name="question" />
+                        不支持7天无理由退货
+                    </view>
+                </view>
+                <view class="right">
+                    <view class="price">￥{{255}}</view>
+                    <view class="num">X{{0}}</view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+
+</view>
+<van-cell title="商品总价" value="￥{{255.00}}.00" />
+<van-cell title="运费" value="￥0.00" />
+<van-cell title="税费" value="￥0.00" />
+
+<van-submit-bar price="{{ 225 }}" button-text="微信支付" bind:submit="onSubmit" />

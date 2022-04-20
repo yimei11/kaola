@@ -21,14 +21,43 @@
                 },
                 {
                     "name": "",
+<<<<<<< HEAD
                     "pathName": "pages/my/my",
+=======
+                    "pathName": "pages/cart/cart",
+>>>>>>> yujie
                     "query": "",
                     "launchMode": "default",
                     "scene": null
                 },
                 {
                     "name": "",
+<<<<<<< HEAD
                     "pathName": "pages/login/login",
+=======
+                    "pathName": "pages/logs/logs",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/order/order",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/handadress/handadress",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/autoadress/autoadress",
+>>>>>>> yujie
                     "query": "",
                     "scene": null,
                     "launchMode": "default"
