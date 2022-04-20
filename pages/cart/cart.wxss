@@ -1,1 +1,85 @@
-/* pages/cart/cart.wxss */
+.top{
+    display: flex;
+    padding:30rpx ;
+    background-color: #fcfcfc;
+    border-bottom:1px solid #ebebeb ;
+}
+.top .lo{
+    background-color: red;
+    padding: 5rpx 15rpx;
+    font-size: 25rpx;
+    border-radius: 30rpx;
+    color: white;
+    font-weight: 600;
+}
+.main .item{
+    display: flex;
+    height: 310rpx;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30rpx;
+    border-bottom:1px solid #ebebeb ;
+}
+.main .item .left{
+    flex-basis: 50rpx;
+
+    height: 100%;
+    padding-top: 110rpx;
+    box-sizing: border-box;
+}
+.main .item .right{
+    flex:1;
+    display: flex;
+
+}
+.main .item .right .img{
+    height: 100%;
+    width: 200rpx;
+    margin-right: 20rpx;
+
+}
+
+.main .item .right .info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+ 
+}
+.main .item .right .info .base{
+    display: flex;
+    justify-content: space-between;
+}
+.main .item .right .info .base1{
+    display: flex;
+    justify-content: space-between;
+}
+.main .item .right .info .title{
+    font-size: 30rpx;
+}
+.main .item .right .info .base{
+    font-size: 25rpx;
+    color:#999999;
+}
+.main .item .right .info .base1 .price{
+    font-size: 30rpx;
+    color:red;
+}
+.main .item .right .info .base1 .price{
+    font-size: 30rpx;
+    color:red;
+}
+
+.main .item .right .info .base1 .delete{
+    font-size: 50rpx;
+}
+.main .computer{
+    text-align: end;
+    padding-right: 20rpx;
+    font-size: 25rpx;
+    padding-top: 20rpx;
+}
+.main .computer view{
+    margin-bottom: 10rpx;
+}

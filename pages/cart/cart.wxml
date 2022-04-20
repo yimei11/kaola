@@ -1,2 +1,46 @@
-<!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<view class="top">
+    <van-checkbox value="{{checked}}" bind:change="onChange" checked-color="#ff0000"></van-checkbox>
+    <view class="lo">自营</view>
+    <view>自营国内仓</view>
+</view>
+
+<view class="main">
+    <view class="item">
+        <view class="left">
+            <van-checkbox value="{{checked}}" bind:change="onChange" checked-color="#ff0000"></van-checkbox>
+        </view>
+        <view class="right">
+            <image src="" class="img"></image>
+            <view class="info">
+                <view class="title">123465</view>
+                <view class="base">
+                    <view>{{111}}</view>
+                    <van-stepper value="{{ 1 }}" bind:change="onChange" />
+                </view>
+                <view class="base1">
+                    <view class="price">￥{{22}}</view>
+                    <view class="delete"><van-icon name="delete-o" /></view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="computer"> 
+        <view>活动优惠: ￥{{0}}</view>
+        <view>本仓总计（不含税）：￥{{0}}</view>
+    </view>
+</view>
+
+<van-submit-bar
+  price="{{ 3050 }}"
+  button-text="结算"
+  label="总计（不含税）"
+  bind:submit="onClickButton"
+  tip="{{ true }}"
+>
+  <van-tag type="primary">
+    <van-checkbox value="{{checked}}" bind:change="onChange" checked-color="#ff0000">全选</van-checkbox>
+  </van-tag>
+
+</van-submit-bar>
+

@@ -1,0 +1,12 @@
+<!--pages/handadress/handadress.wxml-->
+<view>
+    <van-cell-group>
+        <van-field label="收货人" placeholder="姓名" border="{{ false }}" bind:change="getuser" />
+        <van-field label="联系电话" placeholder="手机号码" border="{{ false }}" bind:change="getphone" />
+        <picker class="" mode="region" bindchange="select_fn">
+            <van-cell title="省份" is-link value="{{value?value:'请选择'}}"/>
+        </picker>
+        <van-field label="详细地址" placeholder="街道门派信息" border="{{ false }}" bind:change="getdetailadress" />
+    </van-cell-group>
+    <button class="btn" bindtap="save">保存</button>
+</view>

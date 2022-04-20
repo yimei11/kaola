@@ -5,12 +5,23 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        checked:true
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
+    onChange(){
+        this.setData({
+            checked:!this.data.checked
+        })
+    },
+
+    onClickButton(){
+        wx.navigateTo({
+          url: '/pages/order/order',
+        })
+    },
     onLoad: function (options) {
 
     },

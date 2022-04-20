@@ -1,0 +1,6 @@
+<view>
+    <van-cell 
+    title="一键获取收获地址" 
+    is-link 
+    bind:click="chooseAddress"/>
+</view>

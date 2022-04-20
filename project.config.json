@@ -10,41 +10,46 @@
     },
     "setting": {
         "urlCheck": true,
-        "scopeDataCheck": false,
-        "coverView": true,
         "es6": false,
+        "enhance": true,
         "postcss": true,
-        "compileHotReLoad": false,
-        "lazyloadPlaceholderEnable": false,
         "preloadBackgroundData": false,
         "minified": true,
-        "autoAudits": false,
         "newFeature": false,
-        "uglifyFileName": false,
-        "uploadWithSourceMap": true,
-        "useIsolateContext": false,
+        "coverView": true,
         "nodeModules": false,
-        "enhance": true,
-        "useMultiFrameRuntime": true,
-        "useApiHook": true,
-        "useApiHostProcess": true,
+        "autoAudits": false,
         "showShadowRootInWxmlPanel": true,
-        "packNpmManually": true,
-        "packNpmRelationList": [
-            {
-                "packageJsonPath": "./package.json",
-                "miniprogramNpmDistDir": "./"
-            }
-        ],
+        "scopeDataCheck": false,
+        "uglifyFileName": false,
+        "checkInvalidKey": true,
+        "checkSiteMap": true,
+        "uploadWithSourceMap": true,
+        "compileHotReLoad": false,
+        "lazyloadPlaceholderEnable": false,
+        "useMultiFrameRuntime": false,
+        "useApiHook": false,
+        "useApiHostProcess": false,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "useIsolateContext": true,
+        "userConfirmedUseIsolateContext": true,
+        "userConfirmedBundleSwitch": false,
+        "packNpmManually": false,
+        "packNpmRelationList": [],
         "minifyWXSS": true,
         "disableUseStrict": false,
-        "ignoreUploadUnusedFiles": true,
-        "minifyWXML": true
+        "minifyWXML": true,
+        "showES6CompileOption": false,
+        "useCompilerPlugins": false,
+        "ignoreUploadUnusedFiles": true
     },
     "compileType": "miniprogram",
     "libVersion": "2.19.4",
-    "appid": "wx5052504ed5a2e5c3",
-    "projectname": "kaolahaigou",
+    "projectname": "kaola",
     "debugOptions": {
         "hidedInDevtools": []
     },
@@ -54,6 +59,7 @@
         "servePath": ""
     },
     "isGameTourist": false,
+    "appid": "wx5052504ed5a2e5c3",
     "condition": {
         "search": {
             "list": []
