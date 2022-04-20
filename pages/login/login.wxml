@@ -1,11 +1,28 @@
 <!--pages/login/login.wxml-->
+<!-- 消息提示 -->
+<van-notify id="custom-selector" />
 <view class="login">
   <view class="empty"></view>
   <view class="img">
     <image src="https://t8.baidu.com/it/u=2952062922,1210737553&fm=85&app=131&size=f242,150&n=0&f=JPEG&fmt=auto?s=0490E83288B1088A20A82FEF0300E027&sec=1650474000&t=02f9704bccf4d05a88124d1b3252067d" />      
   </view>
-  <van-button type="primary" block custom-class="tellogin" border round>手机号一键登录</van-button>
-  <van-button type="" block custom-class="wxlogin" border round>微信一键登录</van-button>
+  <van-button type="primary" block custom-class="tellogin" border round bind:tap="getuser_fn">手机号一键登录</van-button>
+  <van-button type="" block custom-class="wxlogin" border round bind:click="dialog_fn">微信一键登录</van-button>
   <view class="text" bindtap="zblogin_fn">暂不登录</view>
   <view class="botton-text">注册/登录即代表同意<text class="">隐私政策</text>和<text class="">服务条款</text></view>
 </view>
+<!-- 点击 微信一键登录 弹窗  -->
+<!-- confirm-button-open-type="getPhoneNumber"
+  bindgetphonenumber="getPhoneNumber" 获取不到手机号 -->
+<van-dialog
+  class="dialog"
+  use-slot
+  title="考拉海购 申请使用"
+  show="{{ show }}"
+  show-cancel-button="拒绝"
+  confirm-button-text="允许"
+  bind:close="onClose"
+  bind:confirm="getuser_fn"
+>
+  <view class="text">为了更好地体验，请绑定手机号，如拒绝将无法登录成功</view>
+</van-dialog>  

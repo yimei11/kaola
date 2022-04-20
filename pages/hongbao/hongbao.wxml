@@ -1,0 +1,18 @@
+<!--pages/hongbao/hongbao.wxml-->
+<van-tabs sticky active="{{name}}">
+	<van-tab title="购物津贴" name="购物津贴">
+		<van-empty wx:if="{{jintie.length==0}}" image="error" description="暂无津贴活动，快去逛逛其他优惠吧" />
+    <view class="btn">
+      <van-button type="warning" round plain>去首页逛逛</van-button>
+    </view>
+	</van-tab>
+	<van-tab title="黑金消费卡" name="黑金消费卡">
+		<van-empty wx:if="{{xiaofei.length==0}}" image="error" description="暂无消费金" />
+	</van-tab>
+	<van-tab title="优惠券" name="优惠券">
+		<van-empty wx:if="{{youhui.length==0}}" image="error" description="暂无优惠券" />
+	</van-tab>
+	<van-tab title="红包" name="红包">
+		<van-empty wx:if="{{hongbao.length==0}}" image="error" description="暂无红包" />
+	</van-tab>
+</van-tabs>

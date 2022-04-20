@@ -1,0 +1,20 @@
+<!--pages/renzheng/renzheng.wxml-->
+<view class="renzheng">
+  <view class="top">
+    <view class="img">
+      <image class="" src=""/>      
+    </view>
+    <view class="text">
+      <view>你还没有实名认证信息哦~</view>
+      <view>为顺利下单，请添加一个吧！</view>
+    </view>
+    <van-button round type="danger">添加实名信息</van-button>
+  </view>
+  <view class="bottom">
+    <view class="title"></view>
+    <view class="text"></view>
+    <view class="text"></view>
+    <view class="text"></view>
+    <view class="text"></view>
+  </view>
+</view>

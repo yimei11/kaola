@@ -42,21 +42,56 @@
                 },
                 {
                     "name": "",
-                    "pathName": "pages/order/order",
+                    "pathName": "pages/shezhi/shezhi",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                  "name": "",
+                  "pathName": "pages/order/order",
+                  "query": "",
+                  "launchMode": "default",
+                  "scene": null
+              },
+                {
+                    "name": "",
+                    "pathName": "pages/yijian/yijian",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                  "name": "",
+                  "pathName": "pages/handadress/handadress",
+                  "query": "",
+                  "launchMode": "default",
+                  "scene": null
+              },
+                {
+                    "name": "",
+                    "pathName": "pages/myorder/myorder",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                  "name": "",
+                  "pathName": "pages/autoadress/autoadress",
+                  "query": "",
+                  "launchMode": "default",
+                  "scene": null
+              },
+                {
+                    "name": "",
+                    "pathName": "pages/hongbao/hongbao",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
                 },
                 {
                     "name": "",
-                    "pathName": "pages/handadress/handadress",
-                    "query": "",
-                    "launchMode": "default",
-                    "scene": null
-                },
-                {
-                    "name": "",
-                    "pathName": "pages/autoadress/autoadress",
+                    "pathName": "pages/shezhi/shezhi",
                     "query": "",
                     "scene": null,
                     "launchMode": "default"

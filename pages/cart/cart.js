@@ -128,6 +128,14 @@ Page({
      */
     onShow: function () {
         this.getdata()
+      //判断 是否登录
+      //未登录
+      let userInfo = wx.getStorageSync('kaola_userInfo')
+      if(!userInfo){
+        wx.switchTab({
+          url: '/pages/login/login',
+        })
+      }
     },
 
     /**

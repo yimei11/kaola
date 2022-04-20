@@ -1,0 +1,9 @@
+.type {
+  padding: 60rpx 40rpx 0;
+}
+.type .title {
+  text-align: center;
+  margin-bottom: 40rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+}

@@ -1,0 +1,30 @@
+page {
+  background-color: #F0F0F0;
+}
+.shezhi,
+.shezhi_login {
+  padding-top: 20rpx;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.shezhi .cell-group,
+.shezhi_login .cell-group {
+  width: 100vw;
+}
+.shezhi .cell-group .cell,
+.shezhi_login .cell-group .cell {
+  margin-bottom: 20rpx;
+  color: #000;
+}
+.shezhi .text,
+.shezhi_login .text {
+  color: blue;
+}
+.dialog .text {
+  padding: 30rpx;
+  text-align: center;
+}

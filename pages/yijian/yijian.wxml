@@ -1,0 +1,15 @@
+<!--pages/yijian/yijian.wxml-->
+<!--  意见 页 -->
+<view class="yijian">
+  <view class="title">请选择反馈类型</view>
+  <view class="box">
+    <van-cell-group border="{{false}}">
+      <van-cell label="向开发者反馈"/>
+      <van-cell center title="功能异常" title-class="cell-title" label-class="cell-label" label="请向开发者反馈小程序功能异常问题。" is-link url="/pages/fktype/fktype?type=0"/>
+      <van-cell center title="产品建议" title-class="cell-title" label-class="cell-label" label="请向开发者反馈你对产品的相关建说。" is-link url="/pages/fktype/fktype?type=1"/>
+      <van-cell label="向微信平台投诉"/>
+      <van-cell center title="交易投诉" title-class="cell-title" label-class="cell-label" label="若遇返款、退货退款、商家服务等问题,可向微信投诉。投诉内容将会同步给商家。" is-link url="/pages/fktype/fktype?type=2"/>
+      <van-cell center title="违规举报" title-class="cell-title" label-class="cell-label" label="若遇色情、诱导、狂抗、欺诈、恶意营销、违法犯罪等情况，可向微信举报。" is-link url="/pages/fktype/fktype?type=3"/>
+    </van-cell-group>
+  </view>
+</view>

@@ -1,6 +1,6 @@
 <!--pages/my/my.wxml-->
 <!-- 未登录 -->
-<view class="nologin">
+<view wx:if="{{!userInfo}}" class="nologin">
   <view class="top" bindtap="tologin_fn">
     <view class="login_register">登录/注册</view>
     <view class="text">关注品牌 第一时间发现更多新品、折扣</view>
@@ -30,7 +30,7 @@
       </view>    
       <view class="text">帮助与客服</view>   
     </view>
-    <view class="item">
+    <view class="item" bindtap="shezhi_fn">
       <view class="img">
         <image class="" src="/images/my/shezhi.png" />
       </view>
@@ -51,17 +51,77 @@
   </view>
 </view>
 <!-- 登录 -->
-<view class="login">
+<view wx:else class="login">
+  <view class="head" bindtap="logined_fn">
+    <view class="top">
+      <view class="img">
+        <image class="" src="{{userInfo.avatarUrl}}"/>        
+      </view>
+      <view class="text">
+        <view class="tel">1234</view>
+        <view class="name">{{userInfo.nickName}}</view>
+      </view>
+    </view>
+    <view class="blackCard">
+      <view class="label">V 考拉黑卡</view>
+      <view class="title">
+        <view class="text">先享后付 省不回推差价</view>
+        <view class="btn">立即查看</view>
+      </view>
+    </view>
+  </view>
+  <van-grid column-num="5" border="{{ false }}" custom-class="fk">
+    <van-grid-item use-slot wx:for="{{ fk }}" wx:key="id" bindtap="fklogined_fn" id="{{item.id}}">
+      <image
+        style="width: 60%;height:60rpx;"
+        src="{{item.src}}"
+      />
+      <view class="text">{{item.title}}</view>
+    </van-grid-item>
+  </van-grid>
+  <van-grid column-num="3" border="{{ false }}" custom-class="yh">
+    <van-grid-item use-slot wx:for="{{ yh }}" wx:key="index" bindtap="yhlogined_fn" data-item="{{index}}">
+      <image
+        style="width: 30%; height: 60rpx;"
+        src="{{item.src}}"
+      />
+      <view class="text">{{item.title}}</view>
+    </van-grid-item>
+  </van-grid>
+  <view class="help">
+    <view class="item" bindtap="help_fn">
+      <view class="img">
+        <image class="" src="/images/my/kefu.png" /> 
+      </view>    
+      <view class="text">帮助与客服</view>   
+    </view>
+    <view class="item" bindtap="shezhi_fn">
+      <view class="img">
+        <image class="" src="/images/my/shezhi.png" />
+      </view>
+      <view class="text">设置</view> 
+    </view>
+  </view>
+  <view class="products">
+    <van-grid gutter="{{ '10rpx' }}" column-num="2" border="{{ false }}" >
+      <van-grid-item use-slot wx:for="{{ products }}" wx:key="id">
+        <view class="img">
+          <image src="{{item.imgsrc}}" />
+        </view>
+        <view class="top-title">{{item.brand}}</view>
+        <view class="lang-title">{{item.title}}</view>
+        <view class="price">{{item.price}}</view>
+      </van-grid-item>
+    </van-grid>
+  </view>
 </view>
 <!-- 弹窗 -->
 <van-dialog
   use-slot
-  title="标题"
   show="{{ show }}"
-  show-cancel-button
-  confirm-button-open-type="getUserInfo"
-  bind:close="onClose"
-  bind:getuserinfo="getUserInfo"
+  confirmButtonText="我知道了"
+  bind:confirm="know_fn"
+  class="dialog"
 >
   <view class="text">请下载-考拉海购App-我的考拉-帮助与客服，联系客服</view>
 </van-dialog>
