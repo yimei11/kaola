@@ -43,24 +43,31 @@
 .choice .buynew{
     background:red;
 }
-.com{
+.popups .com{
     display:flex;
     align-items: center;
     margin:20rpx;
 }
-.com .img{
+.popups .com .img{
     width: 50vw;
     height: 30vw;
 }
-.com .price{
+.popups .com .price{
     color:red;
     font-size:36rpx;
 }
-.com .title{
+.popups .com .title{
     font-size:36rpx;
     overflow: hidden;
     text-overflow: ellipsis;
     display:-webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+}
+.popups .steppers{
+    margin:50rpx 30rpx;
+}
+.popups .btn{
+    position:fixed;
+    bottom:0;
 }
