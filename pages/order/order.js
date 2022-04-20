@@ -28,9 +28,10 @@ Page({
   },
   left_fn() {
     // 导航左侧的点击事件
-    wx.switchTab({
-      url: '/pages/cart/cart',
-    })
+    // wx.switchTab({
+    //   url: '/pages/cart/cart',
+    // })
+    wx.navigateBack()
   },
 
 
@@ -72,17 +73,17 @@ Page({
       }
     })
   },
-  getdata(){
-    let arr = wx.getStorageSync('datas')
-    let newarr = arr.filter(item => item.checked != false)
-    this.setData({
-      arr:newarr
-    })
-  },
+  // getdata(){
+  //   let arr = wx.getStorageSync('datas')
+  //   let newarr = arr.filter(item => item.checked != false)
+  //   this.setData({
+  //     arr:newarr
+  //   })
+  // },
 
 
   allprice() {
-    console.log(this.data.arr)
+    // console.log(this.data.arr)
     let newarr = this.data.arr.filter(item => item.checked != false)
     let all = newarr.reduce(function (sum, item) {
         return sum + item.count * item.price * 100
@@ -90,19 +91,26 @@ Page({
     this.setData({
         allp: all
     })
-},
+  },
+  getdatas(){
+    // 获取详情页传来的数据
+    let that = this
+    const eventChannel = this.getOpenerEventChannel()
+    // 监听datas事件，获取上一页面通过eventChannel传送到当前页面的数据
+    eventChannel.on('orders', function (data) {
+        console.log(data.data)
+        that.setData({
+            arr: data.data
+        })
+    })
+  },
 
   onLoad: function (options) {
-    this.getdata()
+    this.getdatas()
+    // this.getdata()
     this.allprice()
     if (options.adress) {
-      let {
-        user,
-        phone,
-        value,
-        detailadress
-      } = JSON.parse(options.adress);
-
+      let {user,phone,value,detailadress} = JSON.parse(options.adress);
       this.setData({
         user,
         phone,

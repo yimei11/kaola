@@ -50,6 +50,8 @@ Page({
         let data = e.currentTarget.dataset.item
         data.count = this.data.count;
         data.checked = false;
+        let arr = []
+        arr.push(data)
         if (index == "addcart") {
             // 加入购物车
             let arrs = wx.getStorageSync("datas") || [];
@@ -72,14 +74,14 @@ Page({
             })
         } else if (index == "buy") {
             // 跳转到订单页
-            // wx.navigateTo({
-            //     url: 'url',
-            //     success(res) {
-            //         res.eventChannel.emit('datas', {
-            //             data: data
-            //         })
-            //     }
-            // });
+            wx.navigateTo({
+                url: '/pages/order/order',
+                success(res) {
+                    res.eventChannel.emit('orders', {
+                        data: arr
+                    })
+                }
+            });
         }
     },
     /**
