@@ -8,8 +8,8 @@ Page({
         commoditys: null,
         value: null,
         show: false,
-        count:1,
-        id:null
+        count: 1,
+        id: null
     },
     // methods
     select_fn(e) {
@@ -26,7 +26,7 @@ Page({
             id,
         })
     },
-    onAddcart(e){
+    onAddcart(e) {
         let id = e.currentTarget.dataset.id;
         this.setData({
             show: true,
@@ -38,34 +38,48 @@ Page({
             show: false
         });
     },
-    onChange(e){
+    onChange(e) {
         // 步进器事件
         // console.log(e.detail);
         this.setData({
-            count:e.detail
+            count: e.detail
         })
     },
-    onConfirm(e){
-        let id = this.data.id;
+    onConfirm(e) {
+        let index = this.data.id;
         let data = e.currentTarget.dataset.item
         data.count = this.data.count;
         data.checked = false;
-        console.log(data);
-        if(id == "addcart"){
+        if (index == "addcart") {
             // 加入购物车
-            wx.setStorageSync('datas',data);
+            let arrs = wx.getStorageSync("datas") || [];
+            if (arrs.length > 0) {
+                let index = arrs.find((i, n) => {
+                    return i.id == data.id
+                })
+                if (index) {
+                    index.count += data.count
+                } else {
+                    arrs.push(data)
+                }
+            } else {
+                arrs.push(data);
+            }
+            wx.setStorageSync('datas',arrs);
             wx.showToast({
                 title:"添加成功",
                 icon:"success"
             })
-        }else if(id == "buy"){
+        } else if (index == "buy") {
             // 跳转到订单页
-            wx.navigateTo({
-              url: 'url',
-              success(res){
-                res.eventChannel.emit('datas', { data: data })
-              }
-            });
+            // wx.navigateTo({
+            //     url: 'url',
+            //     success(res) {
+            //         res.eventChannel.emit('datas', {
+            //             data: data
+            //         })
+            //     }
+            // });
         }
     },
     /**
