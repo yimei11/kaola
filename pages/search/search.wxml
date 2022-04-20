@@ -1,0 +1,24 @@
+<!--pages/search/search.wxml-->
+<view class="search">
+    <van-search value="{{ value }}" placeholder="在千万海外商品中搜索" bind:focus="foucusfn" field-class="sear" />
+    <view>取消</view>
+</view>
+<view class="records">
+    <view class="del">
+        最近搜索
+        <van-icon name="delete-o" />
+    </view>
+    <view class="record">
+        <block>
+            <view class="item">{{records?records:"无搜索历史"}}</view>
+        </block>
+    </view>
+</view>
+<view class="discover">
+    <view>搜索发现</view>
+    <view class="list">
+        <block wx:for="{{discovers}}" wx:key="*this">
+            <view class="item">{{item}}</view>
+        </block>
+    </view>
+</view>

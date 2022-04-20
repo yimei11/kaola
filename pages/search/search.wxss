@@ -1,0 +1,43 @@
+/* pages/search/search.wxss */
+.search {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background:#fff;
+    font-size:36rpx;
+    color:#ccc;
+}
+.search .sear {
+    width: 75vw;
+}
+.records{
+    margin:20rpx 30rpx;
+    font-size:36rpx;
+    color:#999;
+}
+.records .del{
+    display:flex;
+    justify-content: space-between;
+}
+.records .record{
+    font-size:26rpx;
+    margin-top:20rpx;
+    color:#ccc;
+}
+.discover{
+    margin:20rpx 30rpx;
+    font-size:36rpx;
+    color:#999;
+}
+.discover .list{
+    display:flex;
+    flex-wrap: wrap;
+}
+.discover .item{
+    padding:7rpx 20rpx;
+    background:#eee;
+    border-radius:20rpx;
+    font-size:24rpx;
+    margin:20rpx 20rpx 0 0;
+}

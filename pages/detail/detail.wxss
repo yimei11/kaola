@@ -1,0 +1,66 @@
+/* pages/detail/detail.wxss */
+.container .price{
+    margin:30rpx 20rpx 30rpx;
+    padding-bottom:30rpx;
+    color:red;
+    font-size:36rpx;
+    font-weight:bold;
+    border-bottom:1px solid #ccc;
+}
+.container .price .text{
+    font-size:50rpx;
+}
+.container .title{
+    width: 600rpx;
+    margin:30rpx 20rpx 30rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.choice{
+    height: 150rpx;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position:fixed;
+    bottom:0;
+    left:0;
+}
+.choice .grids{
+    width: 370rpx;
+    height:180rpx;
+}
+.choice .addcart,.choice .buynew{
+    width: 193rpx;
+    height:180rpx;
+    line-height:180rpx;
+    text-align:center;
+    background:rgb(48, 47, 47);
+    color:#fff;
+}
+.choice .buynew{
+    background:red;
+}
+.com{
+    display:flex;
+    align-items: center;
+    margin:20rpx;
+}
+.com .img{
+    width: 50vw;
+    height: 30vw;
+}
+.com .price{
+    color:red;
+    font-size:36rpx;
+}
+.com .title{
+    font-size:36rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
