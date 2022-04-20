@@ -9,9 +9,7 @@
         ]
     },
     "setting": {
-
         "urlCheck": false,
-
         "es6": false,
         "enhance": true,
         "postcss": true,
@@ -27,13 +25,11 @@
         "checkInvalidKey": true,
         "checkSiteMap": true,
         "uploadWithSourceMap": true,
-        "compileHotReLoad": false,
+        "compileHotReLoad": true,
         "lazyloadPlaceholderEnable": false,
-
         "useMultiFrameRuntime": true,
         "useApiHook": true,
         "useApiHostProcess": true,
-
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],

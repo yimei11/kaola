@@ -5,25 +5,109 @@ Page({
      * 页面的初始数据
      */
     data: {
-        checked:true
+        all: false,
+        arr: null,
+        allp:0
     },
-
     /**
      * 生命周期函数--监听页面加载
      */
-    onChange(){
+    onChange(event) {
+        let that = this
+        let id = event.currentTarget.dataset.item;
+        let truel = 0
+        this.data.arr.forEach(function (item, index) {
+            if (item.id == id) {
+                item.checked = !item.checked
+            }
+            if (item.checked) {
+                truel++
+            }
+        })
+        if (truel == this.data.arr.length) {
+            that.setData({
+                all:true
+            })
+        }else{
+            that.setData({
+                all: false
+            })
+        }
+
+        this.setData({ 
+            arr: this.data.arr
+        })
+        this.allprice()
+        wx.setStorageSync('datas', this.data.arr)
+    },
+
+    oncount(e){
+        let id = e.currentTarget.dataset.item;
+        this.data.arr.forEach(function (item, index) {
+            if (item.id == id) {
+                item.count = e.detail
+            }
+        })
+        this.allprice()
+        wx.setStorageSync('datas', this.data.arr)
+       
+    },
+    onall() {
+        let that = this
         this.setData({
-            checked:!this.data.checked
+            all: !this.data.all
         })
+        if(that.data.all){
+            this.setData({
+                arr:this.data.arr.map(item=>{item.checked = true;return item})
+            })
+        }else{
+            this.setData({
+                arr:this.data.arr.map(item=>{item.checked = false;return item})
+            })
+        }
+        wx.setStorageSync('datas', this.data.arr)
+        this.allprice()
+    },
+    delete(e){
+        let id = e.currentTarget.dataset.item;
+        let newarr = this.data.arr.filter(item => item.id != id)
+        this.setData({
+            arr:newarr
+        })
+        wx.setStorageSync('datas', this.data.arr)
+        this.allprice()
     },
 
-    onClickButton(){
+    onClickButton() {
+        let newarr = this.data.arr.filter(item => item.checked != false)
         wx.navigateTo({
-          url: '/pages/order/order',
+            url: '/pages/order/order?order=' + JSON.stringify(newarr),
         })
     },
-    onLoad: function (options) {
 
+    getdata() {
+        let arr = wx.getStorageSync('datas')
+        console.log(arr)
+        this.setData({
+            arr
+        })
+
+    },
+
+    allprice() {
+        let newarr = this.data.arr.filter(item => item.checked != false)
+        let all = newarr.reduce(function (sum, item) {
+            return sum + item.count * item.price * 100
+        }, 0)
+        this.setData({
+            allp: all
+        })
+    },
+
+
+    onLoad: function (options) {
+        
     },
 
     /**
@@ -37,7 +121,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        this.getdata()
     },
 
     /**

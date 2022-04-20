@@ -8,7 +8,9 @@ Page({
     user: '',
     phone: '',
     value: '',
-    detailadress: ''
+    detailadress: '',
+    arr:[],
+    allp:0,
   },
 
   /**
@@ -70,8 +72,29 @@ Page({
       }
     })
   },
+  getdata(){
+    let arr = wx.getStorageSync('datas')
+    let newarr = arr.filter(item => item.checked != false)
+    this.setData({
+      arr:newarr
+    })
+  },
+
+
+  allprice() {
+    console.log(this.data.arr)
+    let newarr = this.data.arr.filter(item => item.checked != false)
+    let all = newarr.reduce(function (sum, item) {
+        return sum + item.count * item.price * 100
+    }, 0)
+    this.setData({
+        allp: all
+    })
+},
 
   onLoad: function (options) {
+    this.getdata()
+    this.allprice()
     if (options.adress) {
       let {
         user,

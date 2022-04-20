@@ -26,39 +26,42 @@
 
 
 <view class="card">
-    <view class="item">
-        <view class="top">
-            <view class="lo">
-                <van-icon name="shop-o" />
+    <block wx:for="{{arr}}" wx:key="index">
+        <view class="item">
+            <view class="top">
+                <view class="lo">
+                    <van-icon name="shop-o" />
+                </view>
+                <view>
+                    考拉美国直购自营店
+                </view>
             </view>
-            <view>
-                考拉美国直购自营店
-            </view>
-        </view>
-        <view class="main">
-            <view class="imgbox">
-                <image src=""></image>
-            </view>
-            <view class="info">
-                <view class="left">
-                    <view class="title">11111111111111111</view>
-                    <view>
-                        <van-icon name="question" />
-                        不支持7天无理由退货
+            <view class="main">
+                <view class="imgbox">
+                    <image src="{{item.imgsrc}}"></image>
+                </view>
+                <view class="info">
+                    <view class="left">
+                        <view class="title">{{item.title}}</view>
+                        <view>
+                            <van-icon name="question" />
+                            不支持7天无理由退货
+                        </view>
+                    </view>
+                    <view class="right">
+                        <view class="price">￥{{item.price}}</view>
+                        <view class="num">X{{item.count}}</view>
                     </view>
                 </view>
-                <view class="right">
-                    <view class="price">￥{{255}}</view>
-                    <view class="num">X{{0}}</view>
-                </view>
             </view>
-        </view>
 
-    </view>
+        </view>
+    </block>
+        
 
 </view>
-<van-cell title="商品总价" value="￥{{255.00}}.00" />
+<van-cell title="商品总价" value="￥{{allp/100}}" />
 <van-cell title="运费" value="￥0.00" />
 <van-cell title="税费" value="￥0.00" />
 
-<van-submit-bar price="{{ 225 }}" button-text="微信支付" bind:submit="onSubmit" />
+<van-submit-bar price="{{allp}}" button-text="微信支付" bind:submit="onSubmit" />
