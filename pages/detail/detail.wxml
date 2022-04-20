@@ -16,7 +16,7 @@
         <view class="buynew" bind:tap="onshow" data-id="buy">立即购买</view>
     </view>
 </view>
-<van-popup round closeable show="{{ show }}" position="bottom" bind:close="onClose" custom-style="height:60%;">
+<van-popup round closeable show="{{ show }}" position="bottom" bind:close="onClose" custom-style="height:60%;" class="popups">
     <view class="com">
         <image src="{{commoditys.imgsrc}}" class="img"></image>
         <view class="text">
@@ -24,6 +24,6 @@
             <view class="title">{{commoditys.title}}</view>
         </view>
     </view>
-    <van-stepper value="{{ count }}" integer bind:change="onChange" />
-    <van-button color="#f20" block bindtap="onConfirm" data-item="{{commoditys}}">确认</van-button>
+    <van-stepper value="{{ count }}" integer bind:change="onChange" custom-class="steppers"/>
+    <van-button color="#f20" block bindtap="onConfirm" data-item="{{commoditys}}" custom-class="btn">确认</van-button>
 </van-popup>
