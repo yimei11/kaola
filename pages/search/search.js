@@ -1,18 +1,26 @@
 // pages/search/search.js
+import myrequest from '../../utils/myrequest'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        discovers:null
     },
-
+    // methods
+    async getDiscovers(){
+        let {data} = await myrequest({url:"/discovers"})
+        // console.log(data.data);
+        this.setData({
+            discovers:data.data
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.getDiscovers()
     },
 
     /**

@@ -6,46 +6,70 @@ Page({
      * 页面的初始数据
      */
     data: {
-        classify:null,
-        move:null,
-        tabs:null,
-        childrens:null
+        classify: null,
+        move: null,
+        tabs: null,
+        childrens: null
     },
     // methods
-    foucusfn(){
+    foucusfn() {
         // 搜索框获得焦点时
         wx.navigateTo({
-          url: '/pages/search/search',
+            url: '/pages/search/search',
         })
     },
-    async getClassify(){
+    async getClassify() {
         // 获取分类数据
-        let {data} = await myrequest({url:"/classify"})
+        let {
+            data
+        } = await myrequest({
+            url: "/classify"
+        })
         this.setData({
-            classify:data.data
+            classify: data.data
         })
     },
-    async getMove(){
+    async getMove() {
         // 获取活动数据
-        let {data} = await myrequest({url:"/move"})
+        let {
+            data
+        } = await myrequest({
+            url: "/move"
+        })
         // console.log(data.data);
         this.setData({
-            move:data.data
+            move: data.data
         })
     },
-    async getTabs(){
+    async getTabs() {
         // 获取活动数据
-        let {data} = await myrequest({url:"/tabs"})
+        let {
+            data
+        } = await myrequest({
+            url: "/tabs"
+        })
         // console.log(data.data);
         this.setData({
-            tabs:data.data,
-            childrens:data.data.猜你喜欢
+            tabs: data.data,
+            childrens: data.data.猜你喜欢
         })
     },
-    onChange(e){
+    onChange(e) {
         let index = e.detail.title;
+        let arr = this.data.tabs[index]
         this.setData({
-            childrens:this.data.tabs[index]
+            childrens:arr,
+        })
+    },
+    navigateTofn(item){
+        // console.log(item.currentTarget.dataset.item);
+        let data = item.currentTarget.dataset.item
+        // 跳转详情页
+        wx.navigateTo({
+          url: '/pages/detail/detail',
+          success(res){
+            res.eventChannel.emit('datas', { data: data })
+          }
         })
     },
     /**

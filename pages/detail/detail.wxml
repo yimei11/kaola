@@ -1,0 +1,29 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+    <van-empty image="{{commoditys.imgsrc}}" />
+    <view class="price">￥<text class="text">{{commoditys.price}}</text></view>
+    <view class="title">{{commoditys.title}}</view>
+    <picker mode="region" bindchange="select_fn">
+        <van-cell title="配送" value="请选择" value="{{value?value:'请选择'}}" is-link />
+    </picker>
+    <view class="choice">
+        <van-grid column-num="3" custom-class="grids">
+            <van-grid-item icon="wap-home-o" text="首页" link-type="switchTab" url="/pages/home/home"/>
+            <van-grid-item icon="shop-o" text="店铺"/>
+            <van-grid-item icon="cart-o" text="购物车" link-type="switchTab" url="/pages/cart/cart"/>
+        </van-grid>
+        <view class="addcart" bindtap="onAddcart" data-id="addcart">加入购物车</view>
+        <view class="buynew" bind:tap="onshow" data-id="buy">立即购买</view>
+    </view>
+</view>
+<van-popup round closeable show="{{ show }}" position="bottom" bind:close="onClose" custom-style="height:60%;">
+    <view class="com">
+        <image src="{{commoditys.imgsrc}}" class="img"></image>
+        <view class="text">
+            <view class="price">￥{{commoditys.price}}</view>
+            <view class="title">{{commoditys.title}}</view>
+        </view>
+    </view>
+    <van-stepper value="{{ count }}" integer bind:change="onChange" />
+    <van-button color="#f20" block bindtap="onConfirm" data-item="{{commoditys}}">确认</van-button>
+</van-popup>
