@@ -1,6 +1,5 @@
 {
     "pages": [
-<<<<<<< HEAD
         "pages/home/home",
         "pages/cart/cart",
         "pages/my/my",
@@ -8,17 +7,11 @@
         "pages/logs/logs",
         "pages/login/login",
         "pages/search/search",
-        "pages/detail/detail"
-=======
-        "pages/index/index",
-        "pages/logs/logs",
-        "pages/home/home",
-        "pages/cart/cart",
-        "pages/my/my",
+        "pages/detail/detail",
         "pages/order/order",
         "pages/handadress/handadress",
         "pages/autoadress/autoadress"
->>>>>>> yujie
+
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -52,7 +45,6 @@
             }
         ]
     },
-<<<<<<< HEAD
     "usingComponents": {
         "van-grid": "@vant/weapp/grid/index",
         "van-grid-item": "@vant/weapp/grid-item/index",
@@ -66,22 +58,19 @@
         "van-cell": "@vant/weapp/cell/index",
         "van-cell-group": "@vant/weapp/cell-group/index",
         "van-popup": "@vant/weapp/popup/index",
-        "van-stepper": "@vant/weapp/stepper/index"
-    },
-    "sitemapLocation": "sitemap.json"
-=======
-    "sitemapLocation": "sitemap.json",
-    "usingComponents": {
-        "van-stepper": "@vant/weapp/stepper/index",
-        "van-icon": "@vant/weapp/icon/index",
         "van-submit-bar": "@vant/weapp/submit-bar/index",
         "van-checkbox": "@vant/weapp/checkbox/index",
         "van-checkbox-group": "@vant/weapp/checkbox-group/index",
-        "van-cell": "@vant/weapp/cell/index",
-        "van-cell-group": "@vant/weapp/cell-group/index",
-        "van-field": "@vant/weapp/field/index",
         "van-picker": "@vant/weapp/picker/index",
-        "van-nav-bar": "@vant/weapp/nav-bar/index"
-    }
->>>>>>> yujie
+        "van-field": "@vant/weapp/field/index",
+        "van-nav-bar": "@vant/weapp/nav-bar/index",
+        "van-stepper": "@vant/weapp/stepper/index"
+    },
+    "sitemapLocation": "sitemap.json"
+
+
+  
+ 
+        
+
 }

@@ -21,21 +21,21 @@
                 },
                 {
                     "name": "",
-<<<<<<< HEAD
                     "pathName": "pages/my/my",
-=======
-                    "pathName": "pages/cart/cart",
->>>>>>> yujie
                     "query": "",
                     "launchMode": "default",
                     "scene": null
                 },
                 {
                     "name": "",
-<<<<<<< HEAD
+                    "pathName": "pages/cart/cart",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
                     "pathName": "pages/login/login",
-=======
-                    "pathName": "pages/logs/logs",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
@@ -57,7 +57,6 @@
                 {
                     "name": "",
                     "pathName": "pages/autoadress/autoadress",
->>>>>>> yujie
                     "query": "",
                     "scene": null,
                     "launchMode": "default"

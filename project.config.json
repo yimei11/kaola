@@ -9,11 +9,9 @@
         ]
     },
     "setting": {
-<<<<<<< HEAD
+
         "urlCheck": false,
-=======
-        "urlCheck": true,
->>>>>>> yujie
+
         "es6": false,
         "enhance": true,
         "postcss": true,
@@ -31,21 +29,16 @@
         "uploadWithSourceMap": true,
         "compileHotReLoad": false,
         "lazyloadPlaceholderEnable": false,
-<<<<<<< HEAD
+
         "useMultiFrameRuntime": true,
         "useApiHook": true,
         "useApiHostProcess": true,
-=======
-        "useMultiFrameRuntime": false,
-        "useApiHook": false,
-        "useApiHostProcess": false,
->>>>>>> yujie
+
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
             "outputPath": ""
         },
-<<<<<<< HEAD
         "useIsolateContext": false,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": true,
@@ -55,13 +48,6 @@
                 "miniprogramNpmDistDir": "./"
             }
         ],
-=======
-        "useIsolateContext": true,
-        "userConfirmedUseIsolateContext": true,
-        "userConfirmedBundleSwitch": false,
-        "packNpmManually": false,
-        "packNpmRelationList": [],
->>>>>>> yujie
         "minifyWXSS": true,
         "disableUseStrict": false,
         "minifyWXML": true,
@@ -71,10 +57,6 @@
     },
     "compileType": "miniprogram",
     "libVersion": "2.19.4",
-<<<<<<< HEAD
-    "appid": "wx5052504ed5a2e5c3",
-=======
->>>>>>> yujie
     "projectname": "kaola",
     "debugOptions": {
         "hidedInDevtools": []
