@@ -5,12 +5,21 @@
         "pages/my/my",
         "pages/index/index",
         "pages/logs/logs",
-        "pages/login/login"
+        "pages/login/login",
+        "pages/shezhi/shezhi",
+        "pages/yijian/yijian",
+        "pages/fktype/fktype",
+        "pages/myorder/myorder",
+        "pages/vip/vip",
+        "pages/tuikuan/tuikuan",
+        "pages/hongbao/hongbao",
+        "pages/renzheng/renzheng",
+        "pages/shengfen/shengfen"
     ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Weixin",
+        "navigationBarTitleText": "weixi",
         "navigationBarTextStyle": "black"
     },
     "tabBar": {
@@ -44,6 +53,14 @@
         "van-grid": "@vant/weapp/grid/index",
         "van-grid-item": "@vant/weapp/grid-item/index",
         "van-button": "@vant/weapp/button/index",
-        "van-dialog": "@vant/weapp/dialog/index"
+        "van-dialog": "@vant/weapp/dialog/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index",
+        "van-nav-bar": "@vant/weapp/nav-bar/index",
+        "van-notify": "@vant/weapp/notify/index",
+        "van-popup": "@vant/weapp/popup/index",
+        "van-tab": "@vant/weapp/tab/index",
+        "van-tabs": "@vant/weapp/tabs/index",
+        "van-empty": "@vant/weapp/empty/index"
     }
 }

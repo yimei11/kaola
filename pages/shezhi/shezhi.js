@@ -1,13 +1,37 @@
-// pages/cart/cart.js
+// pages/shezhi/shezhi.js
 Page({
 
     /**
      * 页面的初始数据
      */
-    data: {
-
+    data: {      
+      userInfo:null,
+      show:false,//弹窗显示 
+    },    
+    getuserinfo(){
+      //获取本地存储的 kaola_userInfo
+      let userInfo = wx.getStorageSync('kaola_userInfo')
+      console.log(userInfo);
+      this.setData({
+        userInfo
+      })
     },
-
+    tuilogin_fn(){
+      //退出登录 弹窗
+      this.setData({
+        show:true
+      })
+    },
+    tuiloginnavigate_fn(){
+      //退出登录 跳转 我的考拉 为登录时页面
+      //把 登录信息删除
+      //.....
+      wx.setStorageSync('kaola_userInfo', null)
+      //在跳转
+      wx.switchTab({
+        url:"/pages/my/my"
+      })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -26,14 +50,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-      //判断 是否登录
-      //未登录
-      let userInfo = wx.getStorageSync('kaola_userInfo')
-      if(!userInfo){
-        wx.switchTab({
-          url: '/pages/login/login',
-        })
-      }
+      this.getuserinfo()
     },
 
     /**

@@ -7,7 +7,8 @@ page {
   padding: 0 30rpx;
   height: 300rpx;
   background-color: #fff;
-  border-radius: 0 0 30rpx 30rpx;
+  border-radius: 0 0 200rpx 200rpx / 0 0 40rpx 40rpx;
+  overflow: hidden;
 }
 .nologin .top .login_register {
   font-size: 48rpx;
@@ -66,6 +67,119 @@ page {
   height: 100%;
 }
 .nologin .products .lang-title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.dialog .text {
+  padding: 30rpx;
+  text-align: center;
+}
+.login .head {
+  padding: 0 30rpx;
+  background-color: #fff;
+  border-radius: 0 0 200rpx 200rpx / 0 0 40rpx 40rpx;
+  overflow: hidden;
+}
+.login .head .top {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+}
+.login .head .top .img {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  overflow: hidden;
+}
+.login .head .top .img image {
+  width: 100%;
+  height: 100%;
+}
+.login .head .top .text .tel {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.login .head .blackCard {
+  margin-top: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  padding: 30rpx;
+  background: #000;
+  color: #FEC998;
+  justify-content: space-between;
+}
+.login .head .blackCard .label {
+  font-size: 32rpx;
+  font-weight: 700;
+  font-style: italic;
+}
+.login .head .blackCard .title {
+  display: flex;
+  font-size: 26rpx;
+  align-items: center;
+  overflow: hidden;
+}
+.login .head .blackCard .title .btn {
+  height: 30rpx;
+  line-height: 30rpx;
+  background-color: #FEC998;
+  color: #000;
+  padding: 0 10rpx;
+  border-radius: 20rpx;
+  margin-left: 20rpx;
+}
+.login .fk {
+  margin: 30rpx;
+}
+.login .yh {
+  margin: 0 30rpx;
+}
+.login .help {
+  margin: 30rpx 30rpx;
+  padding: 30rpx;
+  background-color: #fff;
+  display: flex;
+}
+.login .help .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30rpx;
+}
+.login .help .item .img {
+  width: 60rpx;
+  height: 60rpx;
+  padding: 10rpx;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+.login .help .item .img image {
+  width: 100%;
+  height: 100%;
+}
+.login .help .item .text {
+  margin-top: 10rpx;
+}
+.login .products {
+  padding: 0 20rpx;
+  margin-top: 50rpx;
+}
+.login .products .van-grid-item__content--center {
+  align-items: flex-start;
+}
+.login .products .img {
+  width: 100%;
+  height: 300rpx;
+}
+.login .products .img image {
+  width: 100%;
+  height: 100%;
+}
+.login .products .lang-title {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;

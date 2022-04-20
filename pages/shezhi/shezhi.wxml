@@ -1,0 +1,33 @@
+<!--pages/shezhi/shezhi.wxml-->
+<!-- 设置页面 -->
+<!-- 未登录 -->
+<view wx:if="{{!userInfo}}" class="shezhi">
+  <van-cell-group border="{{false}}" custom-class="cell-group">
+    <van-cell title="意见反馈" is-link border="{{false}}" custom-class="cell" url="/pages/yijian/yijian"/>
+    <van-cell title="实名认证" is-link border="{{false}}" custom-class="cell" url="/pages/login/login"/>
+    <van-cell title="我的身份码" is-link border="{{false}}" custom-class="cell" url="/pages/login/login"/>
+    <van-button type="default" block bind:click="tuilogin_fn">退出登录</van-button>
+  </van-cell-group>
+  <view class="text">证照信息</view>
+</view>
+<!-- 登录 -->
+<view wx:else class="shezhi_login">
+  <van-cell-group border="{{false}}" custom-class="cell-group">
+    <van-cell title="意见反馈" is-link border="{{false}}" custom-class="cell" url="/pages/yijian/yijian"/>
+    <van-cell title="实名认证" is-link border="{{false}}" custom-class="cell" url="/pages/renzheng/renzheng"/>
+    <van-cell title="我的身份码" is-link border="{{false}}" custom-class="cell" url="/pages/shengfen/shengfen"/>
+    <van-button type="default" block bind:click="tuilogin_fn">退出登录</van-button>
+  </van-cell-group>
+  <view class="text">证照信息</view>
+</view>
+<!-- 弹窗 -->
+<van-dialog
+  class="dialog"
+  use-slot
+  show="{{ show }}"
+  showConfirmButton
+  showCancelButton
+  bind:confirm="tuiloginnavigate_fn"
+>
+  <view class="text">确认退出当前账号吗？</view>
+</van-dialog>

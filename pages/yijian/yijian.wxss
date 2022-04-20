@@ -1,0 +1,13 @@
+.yijian {
+  padding-top: 60rpx;
+}
+.yijian .title {
+  font-weight: 600;
+  font-size: 32rpx;
+  text-align: center;
+  color: #000;
+  margin-bottom: 40rpx;
+}
+.yijian .box {
+  padding: 20rpx;
+}

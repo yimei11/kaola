@@ -1,18 +1,25 @@
-// pages/cart/cart.js
+// pages/hongbao/hongbao.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+      jintie:[],
+      xiaofei:[],
+      youhui:[],
+      hongbao:[],
+      name:"购物津贴"
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      console.log(options);
+      this.setData({
+        name:options.wd
+      })
     },
 
     /**
@@ -26,14 +33,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-      //判断 是否登录
-      //未登录
-      let userInfo = wx.getStorageSync('kaola_userInfo')
-      if(!userInfo){
-        wx.switchTab({
-          url: '/pages/login/login',
-        })
-      }
+
     },
 
     /**

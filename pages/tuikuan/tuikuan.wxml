@@ -1,0 +1,9 @@
+<!--pages/tuikuan/tuikuan.wxml-->
+<van-tabs sticky>
+  <van-tab title="售后申请">
+    <van-empty wx:if="{{!shouhou}}" image="error" description="暂无满足申请售后的订单！" />
+  </van-tab>
+  <van-tab title="申请记录">
+    <van-empty wx:if="{{!shenqin}}" image="error" description="暂无申请记录！" />
+  </van-tab>
+</van-tabs>

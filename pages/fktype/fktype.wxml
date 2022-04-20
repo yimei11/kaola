@@ -1,0 +1,9 @@
+<!--pages/fktype/fktype.wxml-->
+<view class="type">
+  <view class="title">请选择反馈内容</view>
+  <van-cell-group border="{{false}}" class="typelist">
+    <block wx:for="{{typeitem}}" wx:key="index">
+      <van-cell title="{{item}}" is-link/>
+    </block>      
+  </van-cell-group>
+</view>

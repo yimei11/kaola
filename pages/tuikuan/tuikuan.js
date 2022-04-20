@@ -1,11 +1,12 @@
-// pages/cart/cart.js
+// pages/tuikuan/tuikuan.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+      shouhou:null,//售后
+      shenqin:null//申请
     },
 
     /**
@@ -26,14 +27,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-      //判断 是否登录
-      //未登录
-      let userInfo = wx.getStorageSync('kaola_userInfo')
-      if(!userInfo){
-        wx.switchTab({
-          url: '/pages/login/login',
-        })
-      }
+
     },
 
     /**

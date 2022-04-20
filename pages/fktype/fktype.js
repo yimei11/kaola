@@ -1,18 +1,29 @@
-// pages/cart/cart.js
+// pages/fktype/fktype.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+      type:'',
+      typelist:[
+        ['无法打开小程序','小程序闪退','卡顿','黑屏白屏','死机','界面错位','界面加载慢','其他异常'],
+        ['无法打开小程序','小程序闪退','卡顿','黑屏白屏','死机','界面错位','界面加载慢','其他异常'],
+        ['无法打开小程序','小程序闪退','卡顿','黑屏白屏','死机','界面错位','界面加载慢','其他异常'],
+        ['无法打开小程序','小程序闪退','卡顿','黑屏白屏','死机','界面错位','界面加载慢','其他异常']
+      ],
+      typeitem:[]
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      let {type} = options;
+      console.log(type);
+      this.setData({
+        type,typeitem:this.data.typelist[type*1]
+      })
     },
 
     /**
@@ -26,14 +37,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-      //判断 是否登录
-      //未登录
-      let userInfo = wx.getStorageSync('kaola_userInfo')
-      if(!userInfo){
-        wx.switchTab({
-          url: '/pages/login/login',
-        })
-      }
+
     },
 
     /**

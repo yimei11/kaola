@@ -40,3 +40,6 @@
 .login .botton-text text {
   color: blue;
 }
+.dialog .text {
+  padding: 30rpx;
+}
