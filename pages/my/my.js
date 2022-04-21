@@ -32,6 +32,18 @@ Page({
         products:data.data.data1
       })
     },
+    navigateTofn(item){
+      // console.log(item.currentTarget.dataset.item);
+      let data = item.currentTarget.dataset.item
+      // let str = data.toString()
+      // 跳转详情页
+      wx.navigateTo({
+        url: '/packagesA/pages/detail/detail',
+        success(res){
+          res.eventChannel.emit('datas', { data: data })
+        }
+      })
+  },
     //未登录 的 方法
     tologin_fn(){
       //未登录，跳转到一键登录

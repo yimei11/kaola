@@ -16,6 +16,13 @@
                     "name": "",
                     "pathName": "pages/renzheng/renzheng",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/myorder/myorder",
+                    "query": "wd=%E5%BE%85%E4%BB%98%E6%AC%BE",
                     "scene": null,
                     "launchMode": "default"
                 }

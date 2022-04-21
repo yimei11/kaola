@@ -2,7 +2,7 @@
 <van-tabs sticky active="{{name}}">
 	<van-tab title="全部" name="全部订单">
 		<van-empty wx:if="{{all.length==0}}" image="error" description="啊哦，你还没有相关的订单~" />
-		<view class="main">
+		<view wx:else class="main">
 			<block wx:for="{{all}}" wx:key="index">
 				<view class="item">
 					<view class="left">
@@ -14,11 +14,11 @@
 							<view class="title">{{item.title}}</view>
 							<view class="base">
 								<view>1瓶</view>								
-								<van-stepper value="{{item.count}}" bind:change="onChange"  />
+								<van-stepper value="{{item.count}}" bind:change="stepper_fn" data-item="{{item.id}}"  />
 								</view>
 							<view class="base1">
 								<view class="price">￥{{item.price}}</view>
-								<view class="delete">									 
+								<view class="delete" bindtap="delete" data-item="{{item}}"> 
 									<van-icon name="delete-o"  />
 									</view>
 								</view>
@@ -26,15 +26,74 @@
 						</view>
 					</view>
 				</block>
+        <van-submit-bar
+          price="{{ price }}"
+          button-text="提交订单"
+          bind:submit="onSubmit"
+          tip="{{ true }}"
+        >
+          <van-tag type="primary">
+             <van-checkbox value="{{allchecked}}" bind:change="onAllChange" checked-color="#ff0000">全选</van-checkbox>
+          </van-tag>
+        </van-submit-bar>
       </view>
 	</van-tab>
 	<van-tab title="待付款" name="待付款">
-		<van-empty wx:if="{{all.length==0}}" image="error" description="啊哦，你还没有相关的订单~" />
+		<van-empty wx:if="{{fukuan.length==0}}" image="error" description="啊哦，你还没有相关的订单~" />
+    <view wx:else class="main">
+			<block wx:for="{{fukuan}}" wx:key="index">
+				<view class="item">
+					<view class="right">
+						 <image src="{{item.imgsrc}}" class="img"></image>
+						 <view class="info">
+							<view class="title">{{item.title}}</view>
+							<view class="base">
+								<view>1瓶</view>								
+								<view class="a">x{{item.count}}</view>
+								</view>
+							<view class="base1">
+								<view class="price">￥{{item.price}}</view>
+              </view>
+              </view>
+          </view>
+        </view>
+      </block>
+      <van-submit-bar
+        price="{{ price }}"
+        button-text="付款"
+        data-item='{"title":"商品","total":{{price/100}}}'
+        bind:submit="fukuan_fn"
+        tip="{{ true }}"
+      >
+        <van-tag type="primary" bindtap="concel_fn">←</van-tag> 
+      </van-submit-bar>
+    </view>
 	</van-tab>
 	<van-tab title="待发货" name="待发货">
-		<van-empty wx:if="{{all.length==0}}" image="error" description="啊哦，你还没有相关的订单~" />
+		<van-empty wx:if="{{fahuo.length==0}}" image="error" description="啊哦，你还没有相关的订单~" />
+    <view wx:else class="main">
+			<block wx:for="{{fahuo}}" wx:key="index">
+				<view class="item">
+					<view class="right">
+						 <image src="{{item.imgsrc}}" class="img"></image>
+						 <view class="info">
+							<view class="title">{{item.title}}</view>
+							<view class="base">
+								<view>1瓶</view>								
+								<view class="a">x{{item.count}}</view>
+								</view>
+							<view class="base1">
+								<view class="price">￥{{item.price}}</view>
+              </view>
+              </view>
+          </view>
+        </view>
+      </block>
+    </view>
 	</van-tab>
 	<van-tab title="待收货" name="待收货">
-		<van-empty wx:if="{{all.length==0}}" image="error" description="啊哦，你还没有相关的订单~" />
+		<van-empty wx:if="{{shouhuo.length==0}}" image="error" description="啊哦，你还没有相关的订单~" />
 	</van-tab>
 </van-tabs>
+<!-- 支付 -->
+<han-pay fukuan="{{fukuan}}"></han-pay>

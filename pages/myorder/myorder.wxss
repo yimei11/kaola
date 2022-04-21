@@ -2,6 +2,7 @@ page {
   background-color: #F0F0F0;
 }
 .main .item {
+  background-color: #fff;
   display: flex;
   height: 310rpx;
   width: 100%;
@@ -34,21 +35,12 @@ page {
 .main .item .right .info .base {
   display: flex;
   justify-content: space-between;
+  font-size: 25rpx;
+  color: #999999;
 }
 .main .item .right .info .base1 {
   display: flex;
   justify-content: space-between;
-}
-.main .item .right .info .title {
-  font-size: 30rpx;
-}
-.main .item .right .info .base {
-  font-size: 25rpx;
-  color: #999999;
-}
-.main .item .right .info .base1 .price {
-  font-size: 30rpx;
-  color: red;
 }
 .main .item .right .info .base1 .price {
   font-size: 30rpx;
@@ -56,4 +48,7 @@ page {
 }
 .main .item .right .info .base1 .delete {
   font-size: 50rpx;
+}
+.main .item .right .info .title {
+  font-size: 30rpx;
 }
