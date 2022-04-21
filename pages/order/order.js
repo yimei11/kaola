@@ -80,18 +80,16 @@ Page({
   //     arr:newarr
   //   })
   // },
-
-
-  allprice() {
-    // console.log(this.data.arr)
-    let newarr = this.data.arr.filter(item => item.checked != false)
-    let all = newarr.reduce(function (sum, item) {
-        return sum + item.count * item.price * 100
-    }, 0)
-    this.setData({
-        allp: all
-    })
-  },
+  // allprice() {
+  //   // console.log(this.data.arr)
+  //   let newarr = this.data.arr.filter(item => item.checked != false)
+  //   let all = newarr.reduce(function (sum, item) {
+  //       return sum + item.count * item.price * 100
+  //   }, 0)
+  //   this.setData({
+  //       allp: all
+  //   })
+  // },
   getdatas(){
     // 获取详情页传来的数据
     let that = this
@@ -99,16 +97,20 @@ Page({
     // 监听datas事件，获取上一页面通过eventChannel传送到当前页面的数据
     eventChannel.on('orders', function (data) {
         console.log(data.data)
+        let all = data.data.reduce(function (sum, item) {
+            return sum + item.count * item.price * 100
+        }, 0)
         that.setData({
-            arr: data.data
+            arr: data.data,
+            allp:all
         })
-    })
+    });
   },
 
   onLoad: function (options) {
     this.getdatas()
     // this.getdata()
-    this.allprice()
+    // this.allprice()
     if (options.adress) {
       let {user,phone,value,detailadress} = JSON.parse(options.adress);
       this.setData({
