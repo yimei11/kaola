@@ -104,7 +104,7 @@
   </view>
   <view class="products">
     <van-grid gutter="{{ '10rpx' }}" column-num="2" border="{{ false }}" >
-      <van-grid-item use-slot wx:for="{{ products }}" wx:key="id" content-class="item">
+      <van-grid-item use-slot wx:for="{{ products }}" wx:key="id" content-class="item" bindtap="navigateTofn" data-item="{{item}}">
         <view class="img">
           <image src="{{item.imgsrc}}" />
         </view>

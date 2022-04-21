@@ -80,7 +80,8 @@
         "van-field": "@vant/weapp/field/index",
         "van-nav-bar": "@vant/weapp/nav-bar/index",
         "van-stepper": "@vant/weapp/stepper/index",
-        "van-notify": "@vant/weapp/notify/index"
+        "van-notify": "@vant/weapp/notify/index",
+        "han-pay": "/components/han-pay/han-pay"
     },
     "sitemapLocation": "sitemap.json"
 }
