@@ -50,7 +50,6 @@ Page({
         })
         this.allprice()
         wx.setStorageSync('datas', this.data.arr)
-       
     },
     onall() {
         let that = this
@@ -81,12 +80,12 @@ Page({
 
     onClickButton() {
         let data = this.data.arr;
-        let newarr = this.data.arr.filter(item => item.checked != false)
+        let newarr = data.filter(item => item.checked != false)
         wx.navigateTo({
             url: '/pages/order/order?order=' + JSON.stringify(newarr),
             success(res){
                 res.eventChannel.emit('orders', {
-                    data,
+                    data:newarr
                 })
             }
         });
@@ -98,7 +97,6 @@ Page({
         this.setData({
             arr
         })
-
     },
 
     allprice() {
