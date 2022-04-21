@@ -13,9 +13,9 @@ Page({
         actives:'data1',    // 类名
     },
     // methods
-    foucusfn() {
+    focusfn() {
         // 搜索框获得焦点时
-        wx.navigateTo({
+        wx.redirectTo({
             url: '/packagesA/pages/search/search',
         })
     },
@@ -61,7 +61,6 @@ Page({
         })
     },
     navigateTofn(item){
-        // console.log(item.currentTarget.dataset.item);
         let data = item.currentTarget.dataset.item
         // let str = data.toString()
         // 跳转详情页

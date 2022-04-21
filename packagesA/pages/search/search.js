@@ -16,6 +16,11 @@ Page({
             discovers:data.data
         })
     },
+    onClickLeft(){
+        wx.switchTab({
+          url: '/pages/home/home',
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

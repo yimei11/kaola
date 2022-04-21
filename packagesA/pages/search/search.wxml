@@ -1,4 +1,5 @@
 <!--pages/search/search.wxml-->
+<van-nav-bar title="搜索" left-arrow bind:click-left="onClickLeft" placeholder fixed/>
 <view class="search">
     <van-search value="{{ value }}" placeholder="在千万海外商品中搜索" bind:focus="foucusfn" field-class="sear" />
     <view>取消</view>

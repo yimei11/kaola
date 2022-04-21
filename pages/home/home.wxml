@@ -1,6 +1,6 @@
 <!--pages/home/home.wxml-->
 <view class="search">
-    <van-search value="{{ value }}" shape="round" placeholder="在千万海外商品中搜索" bind:focus="foucusfn" field-class="sear" />
+    <van-search value="{{ value }}" shape="round" placeholder="在千万海外商品中搜索" bind:focus="focusfn" field-class="sear" />
     <van-icon name="scan" />
 </view>
 <view class="classify">
