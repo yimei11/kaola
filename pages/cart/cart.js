@@ -127,14 +127,16 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        this.getdata()
       //判断 是否登录
       //未登录
       let userInfo = wx.getStorageSync('kaola_userInfo')
+      console.log(userInfo);
       if(!userInfo){
-        wx.switchTab({
+        wx.navigateTo({
           url: '/pages/login/login',
         })
+      }else{
+        this.getdata()
       }
     },
 
