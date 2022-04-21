@@ -104,13 +104,16 @@
   </view>
   <view class="products">
     <van-grid gutter="{{ '10rpx' }}" column-num="2" border="{{ false }}" >
-      <van-grid-item use-slot wx:for="{{ products }}" wx:key="id">
+      <van-grid-item use-slot wx:for="{{ products }}" wx:key="id" content-class="item">
         <view class="img">
           <image src="{{item.imgsrc}}" />
         </view>
-        <view class="top-title">{{item.brand}}</view>
-        <view class="lang-title">{{item.title}}</view>
-        <view class="price">{{item.price}}</view>
+        <view class="top-title">
+          <view class="img"><image class="" src="{{item.country}}" /></view>
+          <view class="a">{{item.brand}}</view>
+        </view>
+        <view class="lang-title"><text class="l-t-box">自营</text>{{item.title}}</view>
+        <view class="price"><text class="price-t">￥</text>{{item.price}}</view>
       </van-grid-item>
     </van-grid>
   </view>

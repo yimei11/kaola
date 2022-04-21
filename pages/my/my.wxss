@@ -55,6 +55,10 @@ page {
   padding: 0 20rpx;
   margin-top: 50rpx;
 }
+.nologin .products .item {
+  border-radius: 10rpx;
+  overflow: hidden;
+}
 .nologin .products .van-grid-item__content--center {
   align-items: flex-start;
 }
@@ -66,11 +70,43 @@ page {
   width: 100%;
   height: 100%;
 }
+.nologin .products .top-title {
+  display: flex;
+  align-items: center;
+  margin: 10rpx 0;
+}
+.nologin .products .top-title .img {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+.nologin .products .top-title .img image {
+  width: 100%;
+  height: 100%;
+}
 .nologin .products .lang-title {
+  margin: 10rpx 0;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+.nologin .products .lang-title .l-t-box {
+  display: inline-block;
+  background-color: red;
+  border-radius: 20rpx;
+  padding: 0 10rpx;
+  color: #fff;
+  margin-right: 10rpx;
+}
+.nologin .products .price {
+  color: #f00;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.nologin .products .price .price-t {
+  font-weight: 400;
+  font-size: 24rpx;
 }
 .dialog .text {
   padding: 30rpx;
@@ -168,6 +204,10 @@ page {
   padding: 0 20rpx;
   margin-top: 50rpx;
 }
+.login .products .item {
+  border-radius: 10rpx;
+  overflow: hidden;
+}
 .login .products .van-grid-item__content--center {
   align-items: flex-start;
 }
@@ -179,9 +219,41 @@ page {
   width: 100%;
   height: 100%;
 }
+.login .products .top-title {
+  display: flex;
+  align-items: center;
+  margin: 10rpx 0;
+}
+.login .products .top-title .img {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+.login .products .top-title .img image {
+  width: 100%;
+  height: 100%;
+}
 .login .products .lang-title {
+  margin: 10rpx 0;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+.login .products .lang-title .l-t-box {
+  display: inline-block;
+  background-color: red;
+  border-radius: 20rpx;
+  padding: 0 10rpx;
+  color: #fff;
+  margin-right: 10rpx;
+}
+.login .products .price {
+  color: #f00;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.login .products .price .price-t {
+  font-weight: 400;
+  font-size: 24rpx;
 }

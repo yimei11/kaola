@@ -74,5 +74,6 @@
         "van-nav-bar": "@vant/weapp/nav-bar/index",
         "van-stepper": "@vant/weapp/stepper/index",
         "van-notify": "@vant/weapp/notify/index"
-    }
+    },
+    "sitemapLocation": "sitemap.json"
 }
