@@ -9,13 +9,14 @@ Page({
         classify: null,
         move: null,
         tabs: null,
-        childrens: null
+        childrens: null,
+        actives:'data1',    // 类名
     },
     // methods
     foucusfn() {
         // 搜索框获得焦点时
         wx.navigateTo({
-            url: '/pages/search/search',
+            url: '/packagesA/pages/search/search',
         })
     },
     async getClassify() {
@@ -43,30 +44,29 @@ Page({
     },
     async getTabs() {
         // 获取活动数据
-        let {
-            data
-        } = await myrequest({
-            url: "/tabs"
-        })
+        let {data} = await myrequest({url: "/tabs"})
         // console.log(data.data);
         this.setData({
             tabs: data.data,
-            childrens: data.data.猜你喜欢
+            childrens: data.data.data1
         })
     },
-    onChange(e) {
-        let index = e.detail.title;
+    tapfn(e){
+        // 点击选项卡事件
+        let index = e.currentTarget.dataset.index;
         let arr = this.data.tabs[index]
         this.setData({
-            childrens:arr,
+            actives:index,
+            childrens:arr
         })
     },
     navigateTofn(item){
         // console.log(item.currentTarget.dataset.item);
         let data = item.currentTarget.dataset.item
+        // let str = data.toString()
         // 跳转详情页
         wx.navigateTo({
-          url: '/pages/detail/detail',
+          url: '/packagesA/pages/detail/detail',
           success(res){
             res.eventChannel.emit('datas', { data: data })
           }

@@ -18,7 +18,7 @@
         </view>
     </view>
     <view class="commodity">
-        <block wx:for="{{move}}" wx:key="*this">
+        <block wx:for="{{move}}" wx:key="in">
             <view class="item">
                 <image src="{{item.imgUrl}}" class="img"></image>
                 <view class="movePrice">硬核价￥{{item.movePrice}}</view>
@@ -28,24 +28,38 @@
     </view>
 </view>
 <view class="tabs">
-    <van-tabs swipeable color="#fff" title-active-color="#fff" tab-class="tab" tab-active-class="atab" nav-class="nav" bind:change="onChange">
-        <block wx:for="{{tabs}}" wx:key="index">
-            <van-tab title="{{index}}">
-                <view class="list">
-                    <block wx:for="{{childrens}}" wx:key="*this">
-                        <view class="item" bindtap="navigateTofn" data-item="{{item}}">
-                            <image src="{{item.imgsrc}}" class="image"></image>
-                            <view class="name">
-                                <image src="{{item.country}}" class="img"></image>
-                                {{item.brand}}
-                            </view>
-                            <view class="title">{{item.title}}</view>
-                            <view class="box">{{item.box}}</view>
-                            <view class="price">￥{{item.price}}</view>
-                        </view>
-                    </block>
-                </view>
-            </van-tab>
-        </block>
-    </van-tabs>
+    <view class="item {{actives=='data1'?'actives':''}}" data-index="data1" bindtap="tapfn">
+        <view class="name">精选</view>
+        <view class="text">猜你喜欢</view>
+    </view>
+    <view class="item {{actives=='data2'?'actives':''}}" data-index="data2" bindtap="tapfn">
+        <image src="https://kaola-haitao.oss.kaolacdn.com/d34fb2c2-a723-4cb0-8bd8-d84f2e019cebT22041401026_171_78.png" class="img"></image>
+        <view class="text">黑卡精选</view>
+    </view>
+    <view class="item {{actives=='data3'?'actives':''}}" data-index="data3" bindtap="tapfn">
+        <view class="name">汽车</view>
+        <view class="text">爱车一族</view>
+    </view>
+    <view class="item {{actives=='data4'?'actives':''}}" data-index="data4" bindtap="tapfn">
+        <view class="name">轻奢</view>
+        <view class="text">奢品大牌</view>
+    </view>
+    <view class="item {{actives=='data5'?'actives':''}}" data-index="data5" bindtap="tapfn">
+        <view class="name">配饰</view>
+        <view class="text">潮流风向</view>
+    </view>
+</view>
+<view class="list">
+    <block wx:for="{{childrens}}" wx:key="index">
+        <view class="item" bindtap="navigateTofn" data-item="{{item}}">
+            <image src="{{item.imgsrc}}" class="image"></image>
+            <view class="name">
+                <image src="{{item.country}}" class="img"></image>
+                {{item.brand}}
+            </view>
+            <view class="title">{{item.title}}</view>
+            <view class="box">{{item.box}}</view>
+            <view class="price">￥{{item.price}}</view>
+        </view>
+    </block>
 </view>

@@ -6,8 +6,6 @@
         "pages/index/index",
         "pages/logs/logs",
         "pages/login/login",
-        "pages/search/search",
-        "pages/detail/detail",
         "pages/order/order",
         "pages/handadress/handadress",
         "pages/autoadress/autoadress"
@@ -45,6 +43,15 @@
             }
         ]
     },
+    "subPackages": [
+        {
+            "root": "packagesA",
+            "pages": [
+                "pages/detail/detail",
+                "pages/search/search"
+            ]
+        }
+    ],
     "usingComponents": {
         "van-grid": "@vant/weapp/grid/index",
         "van-grid-item": "@vant/weapp/grid-item/index",
