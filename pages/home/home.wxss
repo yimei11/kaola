@@ -83,24 +83,39 @@ page{
     color: #999;
 }
 .tabs{
-    margin:50rpx 30rpx 0;
+    margin:40rpx 30rpx 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
-.tabs .nav{
-    background:#f2f2f2;
-    height: 112rpx;
+.tabs .item .name{
+    font-size:34rpx;
+    color:#666;
 }
-.tabs .tab{
-    height: 50rpx;
-    line-height:50rpx;
+.tabs .item .text{
+    font-size:24rpx;
+    padding:5rpx 20rpx;
+    color:#999;
+    margin-top:5rpx;
     border-radius:30rpx;
-    font-size:28rpx;
 }
-.tabs .atab{
+.tabs .item .text:nth-of-type(1){
+    margin-top:-10rpx;
+}
+.tabs .actives .name{
+    color:red;
+}
+.tabs .actives .text{
+    color:#fff;
     background:red;
 }
-
+.tabs .item .img{
+    width: 120rpx;
+    height: 50rpx;
+}
 .list{
-    margin-top:-18rpx;
+    margin:0 30rpx 20rpx;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;

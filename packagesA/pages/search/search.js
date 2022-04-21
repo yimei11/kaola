@@ -1,5 +1,5 @@
 // pages/search/search.js
-import myrequest from '../../utils/myrequest'
+import myrequest from '../../../utils/myrequest'
 Page({
 
     /**
