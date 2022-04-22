@@ -11,6 +11,7 @@
     border-radius: 30rpx;
     color: white;
     font-weight: 600;
+    margin-right: 20rpx;
 }
 .main .item{
     display: flex;
@@ -82,4 +83,22 @@
 }
 .main .computer view{
     margin-bottom: 10rpx;
+}
+
+.box1{
+    width: 100%;
+    text-align: center;
+    font-size: 30rpx;
+    margin-top: 200rpx;
+}
+
+
+.box1 .go{
+    background-color: red;
+    width: 200rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 20rpx auto;
+    border-radius: 10%;
+    font-size: 50rpx;
 }

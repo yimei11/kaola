@@ -65,3 +65,5 @@
 <van-cell title="税费" value="￥0.00" />
 
 <van-submit-bar price="{{allp}}" button-text="微信支付" bind:submit="onSubmit" />
+
+<han-pay fukuan="{{fukuan}}"></han-pay>

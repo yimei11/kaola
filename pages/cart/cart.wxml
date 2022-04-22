@@ -1,44 +1,50 @@
-<view class="top">
-    <van-checkbox value="{{all}}" bind:change="onall" checked-color="#ff0000"></van-checkbox>
-    <view class="lo">自营</view>
-    <view>自营国内仓</view>
+
+
+
+<view class="box1" wx:if="{{arr.length==0}}">
+    <view>您还未挑选商品</view>
+    <view bindtap="goshop" class="go">去逛逛</view>
 </view>
 
-<view class="main">
-    <block wx:for="{{arr}}" wx:key="index">
-        <view class="item">
-            <view class="left">
-                <van-checkbox value="{{item.checked}}" bind:change="onChange" checked-color="#ff0000" data-item="{{item.id}}"></van-checkbox>
-            </view>
-            <view class="right">
-                <image src="{{item.imgsrc}}" class="img"></image>
-                <view class="info">
-                    <view class="title">{{item.title}}</view>
-                    <view class="base">
-                        <view>1瓶</view>
-                        <van-stepper value="{{item.count}}" bind:change="oncount" data-item="{{item.id}}"/>
-                    </view>
-                    <view class="base1">
-                        <view class="price">￥{{item.price}}</view>
-                        <view class="delete" bindtap="delete" data-item="{{item.id}}">
-                            <van-icon name="delete-o" />
+<view class="box2" wx:if="{{arr.length>0}}">
+    <view class="top">
+        <van-checkbox value="{{all}}" bind:change="onall" checked-color="#ff0000"></van-checkbox>
+        <view class="lo">自营</view>
+        <view>自营国内仓</view>
+    </view>
+    <view class="main">
+        <block wx:for="{{arr}}" wx:key="index">
+            <view class="item">
+                <view class="left">
+                    <van-checkbox value="{{item.checked}}" bind:change="onChange" checked-color="#ff0000" data-item="{{item.id}}"></van-checkbox>
+                </view>
+                <view class="right">
+                    <image src="{{item.imgsrc}}" class="img"></image>
+                    <view class="info">
+                        <view class="title">{{item.title}}</view>
+                        <view class="base">
+                            <view>1瓶</view>
+                            <van-stepper value="{{item.count}}" bind:change="oncount" data-item="{{item.id}}"/>
+                        </view>
+                        <view class="base1">
+                            <view class="price">￥{{item.price}}</view>
+                            <view class="delete" bindtap="delete" data-item="{{item.id}}">
+                                <van-icon name="delete-o" />
+                            </view>
                         </view>
                     </view>
                 </view>
             </view>
+        </block>
+        <view class="computer">
+            <view>活动优惠: ￥{{0}}</view>
+            <view>本仓总计（不含税）：￥{{allp}}</view>
         </view>
-    </block>
-
-
-    <view class="computer">
-        <view>活动优惠: ￥{{0}}</view>
-        <view>本仓总计（不含税）：￥{{allp}}</view>
     </view>
+    <van-submit-bar price="{{allp}}" button-text="结算" label="总计（不含税）" bind:submit="onClickButton" tip="{{ true }}">
+        <van-tag type="primary">
+            <van-checkbox value="{{all}}" bind:change="onall" checked-color="#ff0000">全选</van-checkbox>
+        </van-tag>
+    </van-submit-bar>
 </view>
 
-<van-submit-bar price="{{allp}}" button-text="结算" label="总计（不含税）" bind:submit="onClickButton" tip="{{ true }}">
-    <van-tag type="primary">
-        <van-checkbox value="{{all}}" bind:change="onall" checked-color="#ff0000">全选</van-checkbox>
-    </van-tag>
-
-</van-submit-bar>

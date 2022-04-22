@@ -117,6 +117,7 @@ Page({
       let all = this.data.all;
       let {title,total} = JSON.parse(e.currentTarget.dataset.item)
       console.log(title,total);
+      
       wx.hanRequestPayment({
         timeStamp:'11',
         nonceStr: '222',

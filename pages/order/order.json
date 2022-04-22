@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "han-pay":"/components/han-pay/han-pay"
+  },
   "navigationStyle":"custom"
 
 }

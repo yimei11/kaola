@@ -9,8 +9,9 @@ Page({
     phone: '',
     value: '',
     detailadress: '',
-    arr:[],
-    allp:0,
+    arr: [],
+    allp: 0,
+    fukuan:null
   },
 
   /**
@@ -33,6 +34,8 @@ Page({
     // })
     wx.navigateBack()
   },
+
+
 
 
 
@@ -80,6 +83,7 @@ Page({
   //     arr:newarr
   //   })
   // },
+
   // allprice() {
   //   // console.log(this.data.arr)
   //   let newarr = this.data.arr.filter(item => item.checked != false)
@@ -90,21 +94,43 @@ Page({
   //       allp: all
   //   })
   // },
-  getdatas(){
+  getdatas() {
     // 获取详情页传来的数据
     let that = this
     const eventChannel = this.getOpenerEventChannel()
     // 监听datas事件，获取上一页面通过eventChannel传送到当前页面的数据
     eventChannel.on('orders', function (data) {
-        console.log(data.data)
-        let all = data.data.reduce(function (sum, item) {
-            return sum + item.count * item.price * 100
-        }, 0)
-        that.setData({
-            arr: data.data,
-            allp:all
-        })
+      // console.log(data.data)
+      let all = data.data.reduce(function (sum, item) {
+        return sum + item.count * item.price * 100
+      }, 0)
+      that.setData({
+        arr: data.data,
+        allp: all
+      })
     });
+  },
+
+  onSubmit() {
+    console.log("122")
+    let fukuan = this.data.arr;
+    let allp = this.data.allp;
+    this.setData({
+      fukuan
+    })
+    wx.hanRequestPayment({
+      timeStamp: "111",
+      nonceStr: "22",
+      _package: "prepay_id=111",
+      signType: "MDS",
+      paySign: `支付##${allp/100}##cmcc##ffsf##ffmf##edddd`,
+      success(res) {
+        console.log(res)
+      },
+      fail(res) {
+        console.log(res)
+      }
+    })
   },
 
   onLoad: function (options) {
@@ -112,7 +138,12 @@ Page({
     // this.getdata()
     // this.allprice()
     if (options.adress) {
-      let {user,phone,value,detailadress} = JSON.parse(options.adress);
+      let {
+        user,
+        phone,
+        value,
+        detailadress
+      } = JSON.parse(options.adress);
       this.setData({
         user,
         phone,

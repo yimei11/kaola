@@ -1,0 +1,39 @@
+<view wx:if="{{show}}" class="seec-pay-mask{{open ? ' open' : ''}}">
+    <view class="pay-wrapper"><view class="pay">
+        <view class="close" bindtap="close"></view>
+        <view class="title">请输入支付密码</view>
+        <view class="name">{{title}}</view>
+        <view class="total">¥{{total}}</view>
+        <view class="type">
+            <view class="label">支付方式</view>
+            <view class="icon">零钱</view>
+        </view>
+        <view class="input">
+            <view
+                wx:for="012345"
+                wx:key="*this"
+                class="view{{index < pw.length ? ' active' : ''}}"
+            ></view>
+        </view>
+    </view></view>
+    <view class="keyboard" bindtap="keyboard">
+        <view class="view" data-num="1">1</view>
+        <view class="view" data-num="2">2</view>
+        <view class="view" data-num="3">3</view>
+        <view class="view" data-num="4">4</view>
+        <view class="view" data-num="5">5</view>
+        <view class="view" data-num="6">6</view>
+        <view class="view" data-num="7">7</view>
+        <view class="view" data-num="8">8</view>
+        <view class="view" data-num="9">9</view>
+        <view class="view"></view>
+        <view class="view" data-num="0">0</view>
+        <view class="view" data-num="-1"></view>
+    </view>
+    <view class="success" wx:if="{{success}}">
+        <view class="h2">支付成功</view>
+        <view class="h3">{{title}}</view>
+        <view class="h4">¥{{total}}</view>
+        <view class="button" bindtap="success">完成</view>
+    </view>
+</view>

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/yimei11/kaola#readme",
   "dependencies": {
-    "@vant/weapp": "^1.10.2"
+    "@vant/weapp": "^1.10.2",
+    "seec-pay": "^1.0.4"
   }
 }
