@@ -14,6 +14,41 @@ Page({
       //弹窗  拒绝
       this.setData({show:false})
     },
+    getuserinfo_fn(){
+      this._getuserinfo_fn()
+    },
+    _getuserinfo_fn(){
+      wx.getUserProfile({
+        desc:'desc',
+        success:(res)=>{
+          //成功 消息提示 
+          Notify({
+            type: 'success',
+            message: '登录成功',
+            duration: 2000,
+            selector: '#custom-selector',
+          });
+          // console.log(res.userInfo);  
+          // console.log(app);  
+          app.globalData.userInfo =  res.userInfo 
+          wx.setStorageSync('kaola_userInfo', res.userInfo)  
+          // console.log(app); 
+          wx.navigateBack({
+            delta:2,
+            complete: (res) => {},
+          })
+        },
+        fail:(err)=>{
+          console.log(err);
+          //失败消息提示 
+          Notify({
+            message: '登录失败，请同意授权',
+            duration: 2000,
+            selector: '#custom-selector',
+          });
+        }
+      })
+    },
     getuser_fn(){
       //弹窗  允许
       wx.showToast({
@@ -21,36 +56,7 @@ Page({
         icon:'loading',
         duration:2000,
         complete:()=>{
-          wx.getUserProfile({
-            desc:'desc',
-            success:(res)=>{
-              //成功 消息提示 
-              Notify({
-                type: 'success',
-                message: '登录成功',
-                duration: 2000,
-                selector: '#custom-selector',
-              });
-              // console.log(res.userInfo);  
-              // console.log(app);  
-              app.globalData.userInfo =  res.userInfo 
-              wx.setStorageSync('kaola_userInfo', res.userInfo)  
-              // console.log(app); 
-              wx.navigateBack({
-                delta:2,
-                complete: (res) => {},
-              })
-            },
-            fail:(err)=>{
-              console.log(err);
-              //失败消息提示 
-              Notify({
-                message: '登录失败，请同意授权',
-                duration: 2000,
-                selector: '#custom-selector',
-              });
-            }
-          })
+          this._getuserinfo_fn()
         }
       })      
     },
