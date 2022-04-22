@@ -1,37 +1,43 @@
-.login{
-  font-size:24rpx;
+.box{
   height:100vh;
-  // background-color: red;
-  box-sizing:border-box;
-  position:relative;
-  padding:0 60rpx;
-  .empty{
-    height:200rpx;
-  }
-  .img{
-    height:120rpx;
-    background-color: aqua;
-    margin-bottom:40rpx;
-    image{
-      width:100%;
-      height:100%;
+  display:flex;
+  flex-direction: column;
+  .login{
+    flex:1;
+    font-size:24rpx;
+    // height:100%;
+    // background-color: red;
+    box-sizing:border-box;
+    position:relative;
+    padding:0 60rpx;
+    .empty{
+      height:200rpx;
     }
-  }
-  .tellogin{margin-bottom:40rpx;}
-  .wxlogin{margin-bottom:40rpx;border:2rpx solid #ccc;background-color: #fff;}
-  .text{
-    text-align:center;
-    color:#ccc;
-    text-decoration:underline;
-  }
-  .botton-text{
-    width:100%;
-    position:absolute;
-    bottom:40rpx;
-    left:0;
-    text-align:center;
-    text{
-      color:blue;
+    .img{
+      height:120rpx;
+      background-color: aqua;
+      margin-bottom:40rpx;
+      image{
+        width:100%;
+        height:100%;
+      }
+    }
+    .tellogin{margin-bottom:40rpx;}
+    .wxlogin{margin-bottom:40rpx;border:2rpx solid #ccc;background-color: #fff;}
+    .text{
+      text-align:center;
+      color:#ccc;
+      text-decoration:underline;
+    }
+    .botton-text{
+      width:100%;
+      position:absolute;
+      bottom:40rpx;
+      left:0;
+      text-align:center;
+      text{
+        color:blue;
+      }
     }
   }
 }
