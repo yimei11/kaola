@@ -58,7 +58,7 @@
                 {{item.brand}}
             </view>
             <view class="title">{{item.title}}</view>
-            <view class="box">{{item.box}}</view>
+            <view class="box" wx:if="{{item.box}}">{{item.box}}</view>
             <view class="price">￥{{item.price}}</view>
         </view>
     </block>
