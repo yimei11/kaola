@@ -1,15 +1,22 @@
 <!--pages/login/login.wxml-->
-<!-- 消息提示 -->
+<!-- 消息提示 -->  
 <van-notify id="custom-selector" />
-<view class="login">
-  <view class="empty"></view>
-  <view class="img">
-    <image src="https://t8.baidu.com/it/u=2952062922,1210737553&fm=85&app=131&size=f242,150&n=0&f=JPEG&fmt=auto?s=0490E83288B1088A20A82FEF0300E027&sec=1650474000&t=02f9704bccf4d05a88124d1b3252067d" />      
+<view class="box">
+  <van-nav-bar
+    title="考拉海购"
+    left-arrow
+    bind:click-left="zblogin_fn"
+  />
+  <view class="login">
+    <view class="empty"></view>
+    <view class="img">
+      <image src="https://t8.baidu.com/it/u=2952062922,1210737553&fm=85&app=131&size=f242,150&n=0&f=JPEG&fmt=auto?s=0490E83288B1088A20A82FEF0300E027&sec=1650474000&t=02f9704bccf4d05a88124d1b3252067d" />      
+    </view>
+    <van-button type="primary" block custom-class="tellogin" border round bind:tap="getuser_fn">手机号一键登录</van-button>
+    <van-button type="" block custom-class="wxlogin" border round bind:click="dialog_fn">微信一键登录</van-button>
+    <view class="text" bindtap="zblogin_fn">暂不登录</view>
+    <view class="botton-text">注册/登录即代表同意<text class="">隐私政策</text>和<text class="">服务条款</text></view>
   </view>
-  <van-button type="primary" block custom-class="tellogin" border round bind:tap="getuser_fn">手机号一键登录</van-button>
-  <van-button type="" block custom-class="wxlogin" border round bind:click="dialog_fn">微信一键登录</van-button>
-  <view class="text" bindtap="zblogin_fn">暂不登录</view>
-  <view class="botton-text">注册/登录即代表同意<text class="">隐私政策</text>和<text class="">服务条款</text></view>
 </view>
 <!-- 点击 微信一键登录 弹窗  -->
 <!-- confirm-button-open-type="getPhoneNumber"

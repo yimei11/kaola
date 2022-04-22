@@ -60,9 +60,8 @@ Page({
     },
     zblogin_fn(){
       //暂不登录
-      wx.navigateBack({
-        delta:1,
-        complete: (res) => {console.log(res);}
+      wx.switchTab({
+        url: '/pages/my/my'
       })
     },
     /**
