@@ -31,7 +31,7 @@ Page({
         this.setData({
             show: true,
             id,
-        })
+        });
     },
     onClose() {
         this.setData({
@@ -71,7 +71,8 @@ Page({
             wx.showToast({
                 title:"添加成功",
                 icon:"success"
-            })
+            });
+            this.onClose()
         } else if (index == "buy") {
             // 跳转到订单页
             wx.navigateTo({
