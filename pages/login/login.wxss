@@ -4,6 +4,7 @@
   flex-direction: column;
 }
 .box .login {
+  width: 100%;
   flex: 1;
   font-size: 24rpx;
   box-sizing: border-box;
@@ -14,9 +15,9 @@
   height: 200rpx;
 }
 .box .login .img {
-  height: 120rpx;
-  background-color: aqua;
-  margin-bottom: 40rpx;
+  width: 420rpx;
+  height: 130rpx;
+  margin: 0 auto 40rpx;
 }
 .box .login .img image {
   width: 100%;

@@ -35,15 +35,18 @@
                 },
                 {
                     "name": "",
-<<<<<<< HEAD
-                    "pathName": "pages/home/home",
-=======
                     "pathName": "pages/login/login",
->>>>>>> caffa8cc785127fa198b35b76385b82d255ad059
                     "query": "",
                     "scene": null,
                     "launchMode": "default"
-                }
+                },
+                {
+                  "name": "",
+                  "pathName": "pages/home/home",
+                  "query": "",
+                  "scene": null,
+                  "launchMode": "default"
+              }
             ]
         }
     }
