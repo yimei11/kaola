@@ -10,9 +10,9 @@
   <view class="login">
     <view class="empty"></view>
     <view class="img">
-      <image src="https://t8.baidu.com/it/u=2952062922,1210737553&fm=85&app=131&size=f242,150&n=0&f=JPEG&fmt=auto?s=0490E83288B1088A20A82FEF0300E027&sec=1650474000&t=02f9704bccf4d05a88124d1b3252067d" />      
+      <image src="/images/login/logo.png" />      
     </view>
-    <van-button type="primary" block custom-class="tellogin" border round bind:tap="getuserinfo_fn">手机号一键登录</van-button>
+    <van-button type="primary" block custom-class="tellogin" border round bind:tap="getuserinfo_fn" disabled="{{disabled}}">手机号一键登录</van-button>
     <van-button type="" block custom-class="wxlogin" border round bind:click="dialog_fn">微信一键登录</van-button>
     <view class="text" bindtap="zblogin_fn">暂不登录</view>
     <view class="botton-text">注册/登录即代表同意<text class="">隐私政策</text>和<text class="">服务条款</text></view>

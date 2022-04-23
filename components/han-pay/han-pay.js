@@ -124,6 +124,17 @@ Component({
                   success:true
                 })
               }, 2000);
+            },
+            fail:()=>{
+              wx.hideLoading()
+              wx.showToast({
+                title: '支付失败',
+                icon: 'error',
+                duration: 1000,
+                complete:()=>{
+                  this.setData({show:false})
+                }
+              })
             }
           })
         }
@@ -145,6 +156,11 @@ Component({
         let fukuan = JSON.stringify(this.properties.fukuan.map(item => {return item.id}))
         wx.redirectTo({
           url:"/pages/myorder/myorder?wd=待发货&item="+fukuan
+        })
+      },
+      close(){
+        this.setData({
+          show:false
         })
       }
     }

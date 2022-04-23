@@ -32,13 +32,6 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
-                },
-                {
-                    "name": "",
-                    "pathName": "pages/login/login",
-                    "query": "",
-                    "scene": null,
-                    "launchMode": "default"
                 }
             ]
         }
