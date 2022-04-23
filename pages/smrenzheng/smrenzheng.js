@@ -1,4 +1,4 @@
-// pages/renzheng/renzheng.js
+// pages/smrenzheng/smrenzheng.js
 Page({
 
     /**
@@ -7,18 +7,26 @@ Page({
     data: {
 
     },
-    navigate_fn(){
-      wx.navigateTo({
-        url: '/pages/smrenzheng/smrenzheng',
-      })
-    },
+
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
 
     },
-
+    camera_fn(){
+      console.log(1);
+      let CameraContext = wx.createCameraContext()
+      // console.log(CameraContext);
+      CameraContext.takePhoto({
+        quality: "high",
+        selfieMirror:true,
+        success:res=>{
+          console.log(res);
+        },
+        fail:()=>{console.log(1);}
+      })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

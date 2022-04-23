@@ -35,18 +35,18 @@
                 },
                 {
                     "name": "",
-                    "pathName": "pages/login/login",
+                    "pathName": "pages/home/home",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/smrenzheng/smrenzheng",
                     "query": "",
                     "scene": null,
                     "launchMode": "default"
-                },
-                {
-                  "name": "",
-                  "pathName": "pages/home/home",
-                  "query": "",
-                  "scene": null,
-                  "launchMode": "default"
-              }
+                }
             ]
         }
     }

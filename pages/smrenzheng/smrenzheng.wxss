@@ -1,0 +1,124 @@
+.smrz {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.smrz .main {
+  flex: 1;
+  height: 300rpx;
+  background-color: #F0F0F0;
+}
+.smrz .main .top {
+  padding: 20rpx;
+  background-color: #fff;
+}
+.smrz .main .top .title {
+  font-size: 28rpx;
+  color: #000;
+  line-height: 60rpx;
+}
+.smrz .main .top .title .text {
+  font-size: 24rpx;
+  color: #aaa;
+}
+.smrz .main .top .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.smrz .main .top .box .title .icon {
+  display: inline-block;
+  border: 2rpx solid #aaa;
+  color: #aaa;
+  width: 26rpx;
+  height: 26rpx;
+  font-size: 20rpx;
+  margin-right: 10rpx;
+  text-align: center;
+  line-height: 26rpx;
+  border-radius: 50%;
+}
+.smrz .main .top .camera {
+  display: flex;
+  justify-content: space-between;
+}
+.smrz .main .top .camera .zheng,
+.smrz .main .top .camera .fang {
+  width: calc((100vw - 60rpx) / 2);
+}
+.smrz .main .top .camera .zheng .shangc_t,
+.smrz .main .top .camera .fang .shangc_t {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f0f0f0;
+  padding: 30rpx 0;
+}
+.smrz .main .top .camera .zheng .shangc_t .img,
+.smrz .main .top .camera .fang .shangc_t .img {
+  width: 60rpx;
+  height: 60rpx;
+  padding: 20rpx;
+  border-radius: 50%;
+  background-color: #C5C5C5;
+  margin-bottom: 30rpx;
+}
+.smrz .main .top .camera .zheng .shangc_t .img image,
+.smrz .main .top .camera .fang .shangc_t .img image {
+  width: 100%;
+  height: 100%;
+}
+.smrz .main .top .camera .zheng .shangc_t .p,
+.smrz .main .top .camera .fang .shangc_t .p {
+  color: #000;
+  font-size: 24rpx;
+}
+.smrz .main .top .camera .zheng .shangc_b,
+.smrz .main .top .camera .fang .shangc_b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx 0;
+}
+.smrz .main .top .camera .zheng .shangc_b .text,
+.smrz .main .top .camera .fang .shangc_b .text {
+  color: #aaa;
+  font-size: 24rpx;
+  margin-bottom: 30rpx;
+}
+.smrz .main .top .camera .zheng .shangc_b .img,
+.smrz .main .top .camera .fang .shangc_b .img {
+  width: 140rpx;
+  height: 100rpx;
+}
+.smrz .main .top .camera .zheng .shangc_b .img image,
+.smrz .main .top .camera .fang .shangc_b .img image {
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+.smrz .main .top .tip {
+  font-size: 24rpx;
+  color: #aaa;
+  letter-spacing: 4rpx;
+  margin-bottom: 20rpx;
+}
+.smrz .main .bottom {
+  padding: 20rpx;
+}
+.smrz .main .bottom .title {
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #000;
+  font-size: 26rpx;
+}
+.smrz .main .bottom .text {
+  font-size: 22rpx;
+  color: #aaa;
+  line-height: 50rpx;
+  letter-spacing: 4rpx;
+}
+.smrz .btn {
+  height: auto;
+}
