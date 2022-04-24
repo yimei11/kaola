@@ -8,7 +8,7 @@
       <view>你还没有实名认证信息哦~</view>
       <view>为顺利下单，请添加一个吧！</view>
     </view>
-    <van-button custom-class="btn" round type="danger" size="small">添加实名信息</van-button>
+    <van-button custom-class="btn" round type="danger" size="small" bind:tap="navigate_fn">添加实名信息</van-button>
   </view>
 
   <view class="bottom">

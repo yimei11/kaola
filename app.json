@@ -17,7 +17,8 @@
         "pages/tuikuan/tuikuan",
         "pages/hongbao/hongbao",
         "pages/renzheng/renzheng",
-        "pages/shengfen/shengfen"
+        "pages/shengfen/shengfen",
+        "pages/smrenzheng/smrenzheng"
     ],
     "window": {
         "backgroundTextStyle": "light",

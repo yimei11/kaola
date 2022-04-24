@@ -99,10 +99,22 @@ Page({
       this._price_fn()
     },
     onSubmit(){
+      //有选中的才可以提交订单
       //提交订单
-      wx.redirectTo({
-        url: '/pages/myorder/myorder?wd=待付款',
-      })
+      let all = this.data.all
+      let product = all.some(item=>item.checked==true)
+      console.log(product);
+      if(product){
+        wx.redirectTo({
+          url: '/pages/myorder/myorder?wd=待付款',
+        })
+      }else{
+        wx.showToast({
+          title: '请选择商品',
+          icon:'error',
+          duration: 2000
+        })
+      }
     },
     concel_fn(){
       //返回

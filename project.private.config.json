@@ -23,6 +23,27 @@
                     "name": "",
                     "pathName": "pages/myorder/myorder",
                     "query": "wd=%E5%BE%85%E4%BB%98%E6%AC%BE",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/login/login",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/home/home",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/smrenzheng/smrenzheng",
+                    "query": "",
                     "scene": null,
                     "launchMode": "default"
                 }

@@ -1,0 +1,87 @@
+<!--pages/smrenzheng/smrenzheng.wxml-->
+<view class="smrz">
+  <scroll-view class="main" scroll-y="true">
+    <view class="top">
+      <view class="title">
+        身份信息
+        <text class="text">（必填）</text>
+      </view>
+      <van-field
+        value="{{ value }}"
+        placeholder="你的真实姓名"
+        custom-style="background:#f0f0f0;margin-bottom:20rpx;"
+        border="{{ false }}"
+        bind:change="onChange"
+      />
+      <van-field
+        value="{{ value }}"
+        placeholder="你的身份证号码（将加密处理）"
+        custom-style="background:#f0f0f0;margin-bottom:20rpx;"
+        border="{{ false }}"
+        bind:change="onChange"
+      />
+      <view class="title">
+        手机号
+        <text class="text">（必填）</text>
+      </view>
+      <van-field
+        value="{{ value }}"
+        placeholder="与上述实名一致的手机号"
+        custom-style="background:#f0f0f0;margin-bottom:20rpx;"
+        border="{{ false }}"
+        bind:change="onChange"
+      />
+      <view class="box">
+        <view class="title">
+          身份证正反面
+          <text class="text">（选填）</text> 
+        </view>
+        <view class="title">
+          <text class="icon">i</text>
+          <text class="text">照片示例</text>
+        </view>
+      </view>
+      <view class="camera">
+        <view class="zheng">
+          <view class="shangc_t">
+            <view class="img">
+              <image class="" src="/images/my/xiangji.png" bindtap="camera_fn"/>               
+            </view>
+            <view class="p">上传身份证人像面</view>
+          </view>
+          <view class="shangc_b">
+            <view class="text">示例</view>
+            <view class="img">
+              <image class="" src=""/>                
+            </view>
+          </view>
+        </view>
+        <view class="fang">
+          <view class="shangc_t">
+            <view class="img">
+              <image class="" src="/images/my/xiangji.png" bindtap="camera_fn"/>                
+            </view>
+            <view class="p">上传身份证国徽面</view>
+          </view>
+          <view class="shangc_b">
+            <view class="text">示例</view>
+            <view class="img">
+              <image class="" src=""/>                
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="tip">温馨提示∶请上传原始比例的身份证正反面，请勿裁剪涂改，保证身份信息清晰显示，否则无法通过审核</view>
+    </view>
+    <view class="bottom">
+      <view class="title">为什么需要实名认证?</view>
+      <view class="text">根据海关规定，购买跨境商品需要办理清关手续，请你配合进行实名认证，以确保你购买的商品顺利通过海关检查。</view>
+      <view class="text">考拉会对您的个人信息做加密处理,并依法或依您授权使用，绝不对外泄露。</view>
+      <view class="text">实名认证的规则:</view>
+      <view class="text">购买跨境商品需填写真实姓名、身份证号码及与手机号，部分商品下单时需提供收货人的实名信息(含身份证照片)，具体请以下单时的提示为准。</view>
+    </view>
+  </scroll-view>
+  <view class="btn">
+    <van-button type="danger" block>保存</van-button>
+  </view>
+</view>

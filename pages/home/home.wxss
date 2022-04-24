@@ -155,9 +155,12 @@ page{
 }
 .list .item .box{
     display: inline-block;
-    font-size:26rpx;
+    color:red;
+    font-size:20rpx;
     margin:5rpx 25rpx;
     border:1px solid red;
+    border-radius: 9rpx;
+    padding: 5rpx;
 }
 .list .item .price{
     font-size:28rpx;
